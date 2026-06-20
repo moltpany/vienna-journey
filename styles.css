@@ -542,6 +542,21 @@ body.view-list #list-container { display: flex; }
 }
 #theme-toggle:hover { border-color: var(--text-dim); }
 
+#lang-toggle {
+  flex-shrink: 0;
+  height: 28px;
+  padding: 0 9px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+#lang-toggle:hover { border-color: var(--text-dim); }
+
 /* ── LIGHT THEME ── */
 html.theme-light {
   --bg: #f4f1ec;

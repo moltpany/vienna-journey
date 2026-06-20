@@ -17,37 +17,38 @@
 
 <!-- ── HEADER ────────────────────────────────────── -->
 <header id="header">
-  <div id="site-title">Vienna Journey<span>维也纳文化地图</span></div>
+  <div id="site-title">Vienna Journey<span data-i18n="subtitle">维也纳文化地图</span></div>
 
   <div id="view-toggle">
-    <button class="view-btn active" data-view="map" type="button">🗺 地图</button>
-    <button class="view-btn" data-view="list" type="button">☰ 列表</button>
+    <button class="view-btn active" data-view="map" type="button" data-i18n="view-map">🗺 地图</button>
+    <button class="view-btn" data-view="list" type="button" data-i18n="view-list">☰ 列表</button>
   </div>
 
   <div id="category-filters">
     <button class="cat-btn active" data-cat="music">
-      <span class="dot"></span>音乐
+      <span class="dot"></span><span data-i18n="cat-music">音乐</span>
     </button>
     <button class="cat-btn active" data-cat="visual-art">
-      <span class="dot"></span>视觉艺术
+      <span class="dot"></span><span data-i18n="cat-visual-art">视觉艺术</span>
     </button>
     <button class="cat-btn active" data-cat="architecture">
-      <span class="dot"></span>建筑
+      <span class="dot"></span><span data-i18n="cat-architecture">建筑</span>
     </button>
     <button class="cat-btn active" data-cat="psychoanalysis">
-      <span class="dot"></span>精神分析
+      <span class="dot"></span><span data-i18n="cat-psychoanalysis">精神分析</span>
     </button>
     <button class="cat-btn active" data-cat="philosophy">
-      <span class="dot"></span>哲学
+      <span class="dot"></span><span data-i18n="cat-philosophy">哲学</span>
     </button>
     <button class="cat-btn active" data-cat="literature">
-      <span class="dot"></span>文学
+      <span class="dot"></span><span data-i18n="cat-literature">文学</span>
     </button>
   </div>
 
-  <input id="search-box" type="search" placeholder="搜索作品或人物…" />
+  <input id="search-box" type="search" placeholder="搜索作品或人物…" data-i18n-ph="search-ph" />
 
-  <button id="theme-toggle" type="button" title="切换深色 / 浅色" aria-label="切换深色 / 浅色">🌙</button>
+  <button id="lang-toggle" type="button" data-i18n="lang-btn">EN</button>
+  <button id="theme-toggle" type="button" title="切换深色 / 浅色" aria-label="切换主题" data-i18n-title="theme-title">🌙</button>
 </header>
 
 <!-- ── MAIN LAYOUT ────────────────────────────────── -->
@@ -68,7 +69,7 @@
   <aside id="detail-panel">
     <div id="detail-empty">
       <div class="empty-icon">🗺</div>
-      <p>点击地图标记、作品列表<br>或时间轴上的节点<br>探索维也纳的文化版图</p>
+      <p data-i18n-html="empty">点击地图标记、作品列表<br>或时间轴上的节点<br>探索维也纳的文化版图</p>
     </div>
 
     <div id="detail-content">
@@ -85,31 +86,31 @@
       <div id="detail-body">
         <figure id="detail-image" style="display:none"></figure>
         <div class="detail-section" id="section-context">
-          <div class="detail-section-label">背景</div>
+          <div class="detail-section-label" data-i18n="lbl-context">背景</div>
           <p id="detail-context"></p>
         </div>
 
         <div class="detail-divider"></div>
 
         <div class="detail-section" id="section-meaning">
-          <div class="detail-section-label">意义</div>
+          <div class="detail-section-label" data-i18n="lbl-meaning">意义</div>
           <p id="detail-meaning"></p>
         </div>
 
         <div class="detail-divider"></div>
 
         <div class="detail-section" id="section-place">
-          <div class="detail-section-label">地点</div>
+          <div class="detail-section-label" data-i18n="lbl-place">地点</div>
           <div class="detail-place-block" id="detail-place"></div>
         </div>
 
         <div class="detail-section" id="section-links" style="display:none">
-          <div class="detail-section-label">延伸阅读</div>
+          <div class="detail-section-label" data-i18n="lbl-links">延伸阅读</div>
           <div class="detail-links" id="detail-links"></div>
         </div>
 
         <div class="detail-section" id="section-source">
-          <div class="detail-section-label">来源</div>
+          <div class="detail-section-label" data-i18n="lbl-source">来源</div>
           <div class="detail-source" id="detail-source"></div>
         </div>
       </div>

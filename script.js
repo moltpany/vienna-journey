@@ -20,6 +20,19 @@ const CAT_LABELS = {
   'literature':     '文学',
 };
 
+const CAT_LABELS_EN = {
+  'music':          'Music',
+  'visual-art':     'Visual Art',
+  'architecture':   'Architecture',
+  'philosophy':     'Philosophy',
+  'psychoanalysis': 'Psychoanalysis',
+  'literature':     'Literature',
+};
+
+function catLabel(cat) {
+  return (lang === 'en' ? CAT_LABELS_EN : CAT_LABELS)[cat] || cat;
+}
+
 const YEAR_MIN = 1780;
 const YEAR_MAX = 1940;
 
@@ -33,6 +46,9 @@ let timelineDots = {};    // id → DOM element
 let listCards = {};       // id → list card DOM element
 let map;
 let tileLayer;
+let lang = (localStorage.getItem('vienna-journey-lang') === 'en') ? 'en' : 'zh';
+let enEntries = {};       // id → English overlay
+let enMilestones = {};    // id → English overlay
 
 /* ── Bootstrap ── */
 async function init() {
@@ -42,6 +58,8 @@ async function init() {
   initFilters();
   initSearch();
   initViewToggle();
+  initLang();
+  applyUIStrings();
   renderMarkers();
   renderTimeline();
   renderList();
@@ -60,6 +78,18 @@ async function loadData() {
     console.error('Data load failed:', e);
     entries = [];
     milestones = [];
+  }
+  // English overlays (optional; graceful fallback to Chinese if missing)
+  enEntries    = (await loadJson('data/vienna-journey.en.json'))    || {};
+  enMilestones = (await loadJson('data/vienna-milestones.en.json')) || {};
+}
+
+async function loadJson(url) {
+  try {
+    const r = await fetch(url);
+    return r.ok ? await r.json() : null;
+  } catch (e) {
+    return null;
   }
 }
 
@@ -89,6 +119,7 @@ function renderMarkers() {
   markers = {};
 
   entries.forEach(entry => {
+    const e = tr(entry);
     const color = CAT_COLORS[entry.category] || '#aaa';
     const icon = L.divIcon({
       className: '',
@@ -100,9 +131,9 @@ function renderMarkers() {
 
     const marker = L.marker([entry.lat, entry.lng], { icon })
       .bindPopup(`
-        <div class="popup-work">${entry.work}</div>
-        <div class="popup-person">${entry.person || ''}</div>
-        <div class="popup-year">${entry.year} · ${entry.city}</div>
+        <div class="popup-work">${e.work}</div>
+        <div class="popup-person">${e.person || ''}</div>
+        <div class="popup-year">${e.year} · ${e.city}</div>
       `)
       .addTo(map);
 
@@ -146,13 +177,17 @@ function applyVisibility() {
   });
 
   const countEl = document.getElementById('list-count');
-  if (countEl) countEl.textContent = `显示 ${visibleCount} / ${entries.length} 件作品`;
+  if (countEl) countEl.textContent = UI[lang].count(visibleCount, entries.length);
 }
 
 function matchSearch(entry, q) {
+  const e = tr(entry);
   return (entry.work || '').toLowerCase().includes(q)
+    || (e.work || '').toLowerCase().includes(q)
     || (entry.person || '').toLowerCase().includes(q)
+    || (e.person || '').toLowerCase().includes(q)
     || (entry.genre || '').toLowerCase().includes(q)
+    || (e.genre || '').toLowerCase().includes(q)
     || String(entry.year).includes(q);
 }
 
@@ -206,6 +241,103 @@ function initTheme() {
   applyTheme(currentTheme());
 }
 
+/* ── I18N (中 / EN) ── */
+const LANG_KEY = 'vienna-journey-lang';
+const UI = {
+  zh: {
+    'subtitle': '维也纳文化地图',
+    'view-map': '🗺 地图', 'view-list': '☰ 列表',
+    'cat-music': '音乐', 'cat-visual-art': '视觉艺术', 'cat-architecture': '建筑',
+    'cat-psychoanalysis': '精神分析', 'cat-philosophy': '哲学', 'cat-literature': '文学',
+    'search-ph': '搜索作品或人物…',
+    'theme-title': '切换深色 / 浅色',
+    'lang-btn': 'EN',
+    'empty': '点击地图标记、作品列表<br>或时间轴上的节点<br>探索维也纳的文化版图',
+    'lbl-context': '背景', 'lbl-meaning': '意义', 'lbl-place': '地点', 'lbl-links': '延伸阅读', 'lbl-source': '来源',
+    'listen-apple': '在 Apple Music 搜索', 'listen-spotify': '在 Spotify 搜索',
+    'listen-youtube': '在 YouTube 搜索', 'listen-bilibili': '在 Bilibili 搜索',
+    'source-fallback': '来源',
+    'count': (n, t) => `显示 ${n} / ${t} 件作品`,
+  },
+  en: {
+    'subtitle': 'A Cultural Map of Vienna',
+    'view-map': '🗺 Map', 'view-list': '☰ List',
+    'cat-music': 'Music', 'cat-visual-art': 'Visual Art', 'cat-architecture': 'Architecture',
+    'cat-psychoanalysis': 'Psychoanalysis', 'cat-philosophy': 'Philosophy', 'cat-literature': 'Literature',
+    'search-ph': 'Search works or people…',
+    'theme-title': 'Toggle dark / light',
+    'lang-btn': '中',
+    'empty': "Click a map marker, a work in the list,<br>or a node on the timeline<br>to explore Vienna's cultural map",
+    'lbl-context': 'Context', 'lbl-meaning': 'Significance', 'lbl-place': 'Place', 'lbl-links': 'Links', 'lbl-source': 'Source',
+    'listen-apple': 'Search on Apple Music', 'listen-spotify': 'Search on Spotify',
+    'listen-youtube': 'Search on YouTube', 'listen-bilibili': 'Search on Bilibili',
+    'source-fallback': 'Source',
+    'count': (n, t) => `Showing ${n} / ${t} works`,
+  },
+};
+
+function tr(entry) {
+  if (lang !== 'en') return entry;
+  const ov = enEntries[entry.id];
+  if (!ov) return entry;
+  return {
+    ...entry, ...ov,
+    place:     { ...(entry.place || {}),     ...(ov.place || {}) },
+    source:    { ...(entry.source || {}),    ...(ov.source || {}) },
+    listening: { ...(entry.listening || {}), ...(ov.listening || {}) },
+    image:     { ...(entry.image || {}),     ...(ov.image || {}) },
+  };
+}
+
+function trMs(ms) {
+  if (lang !== 'en') return ms;
+  const ov = enMilestones[ms.id];
+  return ov ? { ...ms, ...ov } : ms;
+}
+
+function applyUIStrings() {
+  const dict = UI[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (dict[k] !== undefined) el.textContent = dict[k];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const k = el.getAttribute('data-i18n-html');
+    if (dict[k] !== undefined) el.innerHTML = dict[k];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const k = el.getAttribute('data-i18n-ph');
+    if (dict[k] !== undefined) el.setAttribute('placeholder', dict[k]);
+  });
+  document.querySelectorAll('[data-i18n-title]').forEach(el => {
+    const k = el.getAttribute('data-i18n-title');
+    if (dict[k] !== undefined) el.setAttribute('title', dict[k]);
+  });
+  document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'zh-CN');
+}
+
+function initLang() {
+  const btn = document.getElementById('lang-toggle');
+  if (btn) btn.addEventListener('click', () => setLang(lang === 'en' ? 'zh' : 'en'));
+}
+
+function setLang(l) {
+  lang = l;
+  localStorage.setItem(LANG_KEY, l);
+  applyUIStrings();
+  renderMarkers();
+  renderTimeline();
+  renderList();
+  applyVisibility();
+  if (selectedId) {
+    const e = entries.find(x => x.id === selectedId);
+    if (e) showDetail(tr(e));
+    const card = listCards[selectedId]; if (card) card.classList.add('selected');
+    const dot  = timelineDots[selectedId]; if (dot) dot.classList.add('selected');
+    const mk   = markers[selectedId]; if (mk) mk.openPopup();
+  }
+}
+
 /* ── VIEW TOGGLE (map / list) ── */
 function initViewToggle() {
   document.querySelectorAll('.view-btn').forEach(btn => {
@@ -231,16 +363,17 @@ function renderList() {
   listCards = {};
 
   [...entries].sort((a, b) => a.year - b.year).forEach(entry => {
+    const e = tr(entry);
     const color = CAT_COLORS[entry.category] || '#aaa';
     const card = document.createElement('div');
     card.className = 'list-card';
     card.dataset.id = entry.id;
     card.style.setProperty('--cat-color', color);
     card.innerHTML = `
-      <div class="list-card-cat">${CAT_LABELS[entry.category] || entry.category}</div>
-      <div class="list-card-work">${entry.work}</div>
-      <div class="list-card-person">${entry.person || ''}</div>
-      <div class="list-card-meta">${entry.year} · ${entry.city}</div>
+      <div class="list-card-cat">${catLabel(entry.category)}</div>
+      <div class="list-card-work">${e.work}</div>
+      <div class="list-card-person">${e.person || ''}</div>
+      <div class="list-card-meta">${e.year} · ${e.city}</div>
     `;
     card.addEventListener('click', () => selectEntry(entry.id));
     grid.appendChild(card);
@@ -251,6 +384,10 @@ function renderList() {
 /* ── TIMELINE ── */
 function renderTimeline() {
   const inner = document.getElementById('timeline-inner');
+
+  // clear previous render (keep the axis) so this can re-run on language switch
+  inner.querySelectorAll('.tl-year-label, .tl-milestone, .tl-entry-dot').forEach(el => el.remove());
+  timelineDots = {};
 
   // Year labels
   const labelYears = [1786, 1800, 1815, 1830, 1848, 1867, 1900, 1914, 1921, 1938];
@@ -273,7 +410,7 @@ function renderTimeline() {
 
     const label = document.createElement('div');
     label.className = 'tl-ms-label';
-    label.textContent = ms.labelShort;
+    label.textContent = trMs(ms).labelShort;
 
     el.appendChild(tick);
     el.appendChild(label);
@@ -291,7 +428,7 @@ function renderTimeline() {
     dot.className = 'tl-entry-dot';
     dot.style.left = pct(entry.year) + '%';
     dot.style.background = color;
-    dot.title = `${entry.year} · ${entry.work}`;
+    dot.title = `${entry.year} · ${tr(entry).work}`;
     inner.appendChild(dot);
     timelineDots[entry.id] = dot;
 
@@ -310,9 +447,10 @@ function pct(year) {
 const msTooltip = document.getElementById('milestone-tooltip');
 
 function showMilestoneTooltip(ms, e) {
-  document.getElementById('ms-year').textContent  = ms.year;
-  document.getElementById('ms-label').textContent = ms.label;
-  document.getElementById('ms-desc').textContent  = ms.description;
+  const m = trMs(ms);
+  document.getElementById('ms-year').textContent  = m.year;
+  document.getElementById('ms-label').textContent = m.label;
+  document.getElementById('ms-desc').textContent  = m.description;
 
   const rect = e.currentTarget.getBoundingClientRect();
   msTooltip.style.left   = Math.min(rect.left, window.innerWidth - 300) + 'px';
@@ -347,7 +485,7 @@ function selectEntry(id) {
     markers[id].openPopup();
   }
 
-  showDetail(entry);
+  showDetail(tr(entry));
 }
 
 function deselect() {
@@ -365,11 +503,11 @@ function showDetail(entry) {
   document.getElementById('detail-content').classList.add('visible');
 
   const color = CAT_COLORS[entry.category] || '#aaa';
-  const catLabel = CAT_LABELS[entry.category] || entry.category;
+  const catLabelText = catLabel(entry.category);
 
   // Badge
   document.getElementById('detail-badge-dot').style.background = color;
-  document.getElementById('detail-badge-label').textContent = catLabel;
+  document.getElementById('detail-badge-label').textContent = catLabelText;
   document.getElementById('detail-badge').style.color = color;
 
   // Header
@@ -420,20 +558,20 @@ function showDetail(entry) {
   }
   if (entry.listening) {
     if (entry.listening.appleMusicSearch) {
-      allLinks.push({ label: '在 Apple Music 搜索', url: entry.listening.appleMusicSearch });
+      allLinks.push({ label: UI[lang]['listen-apple'], url: entry.listening.appleMusicSearch });
     }
     if (entry.listening.spotifySearch) {
-      allLinks.push({ label: '在 Spotify 搜索', url: entry.listening.spotifySearch });
+      allLinks.push({ label: UI[lang]['listen-spotify'], url: entry.listening.spotifySearch });
     }
     if (entry.listening.youtubeSearch) {
-      allLinks.push({ label: '在 YouTube 搜索', url: entry.listening.youtubeSearch });
+      allLinks.push({ label: UI[lang]['listen-youtube'], url: entry.listening.youtubeSearch });
     }
     if (entry.listening.bilibiliSearch) {
-      allLinks.push({ label: '在 Bilibili 搜索', url: entry.listening.bilibiliSearch });
+      allLinks.push({ label: UI[lang]['listen-bilibili'], url: entry.listening.bilibiliSearch });
     }
   }
   if (entry.source && entry.source.url) {
-    allLinks.push({ label: entry.source.label || '来源', url: entry.source.url });
+    allLinks.push({ label: entry.source.label || UI[lang]['source-fallback'], url: entry.source.url });
   }
 
   if (allLinks.length) {

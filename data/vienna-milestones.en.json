@@ -1,0 +1,52 @@
+{
+  "french-revolution-1789": {
+    "label": "French Revolution",
+    "labelShort": "Revolution",
+    "description": "Enlightenment ideals erupt as revolution, shaking Europe's old order. The Viennese court is alarmed, but revolutionary ideas can no longer be stopped."
+  },
+  "napoleon-holy-roman-empire-1806": {
+    "label": "Dissolution of the Holy Roman Empire",
+    "labelShort": "Empire ends",
+    "description": "Napoleon forces Franz II to give up the title of 'Holy Roman Emperor'; the thousand-year empire is nominally dissolved, and Austria is renamed the 'Austrian Empire'."
+  },
+  "congress-of-vienna-1815": {
+    "label": "Congress of Vienna",
+    "labelShort": "Congress",
+    "description": "After the Napoleonic Wars, Europe's powers redraw the political map in Vienna. The city becomes Europe's diplomatic centre, prosperous as never before. 'The Congress dances, but it does not advance.'"
+  },
+  "revolution-1848": {
+    "label": "Revolutions of 1848",
+    "labelShort": "March Rev.",
+    "description": "A wave of revolution sweeps Europe; Viennese citizens and students take to the streets, Metternich flees, and the Habsburg court totters. Repression eventually restores order, but reform has taken root."
+  },
+  "ausgleich-1867": {
+    "label": "Austro-Hungarian Compromise",
+    "labelShort": "Ausgleich",
+    "description": "Austria and Hungary reach the Compromise, forming the dual monarchy of 'Austria-Hungary'. Vienna enters the peak of Ringstraße construction and rapid modernisation."
+  },
+  "secession-founded-1897": {
+    "label": "Founding of the Vienna Secession",
+    "labelShort": "Secession",
+    "description": "Klimt and other artists break from the conservative academy to found the 'Secession', proclaiming artistic freedom. The same year, the antisemitic politician Karl Lueger is elected mayor — the city's light and shadow side by side."
+  },
+  "turn-of-century-1900": {
+    "label": "Turn of the Century",
+    "labelShort": "Fin de siècle",
+    "description": "Freud publishes The Interpretation of Dreams; Vienna is in its cultural golden age — Secession, psychoanalysis, new architecture and a literary revolution erupting at once, the old empire's sunset especially brilliant."
+  },
+  "wwi-1914": {
+    "label": "Outbreak of the First World War",
+    "labelShort": "WWI",
+    "description": "After the assassination in Sarajevo, Austria-Hungary declares war on Serbia, igniting the World War. Vienna's golden age halts abruptly — what Zweig called the end of 'the world of yesterday'."
+  },
+  "republic-austria-1918": {
+    "label": "Collapse of the Habsburg Empire",
+    "labelShort": "Empire falls",
+    "description": "WWI ends, the 650-year Habsburg dynasty falls, and the Republic of Austria is founded. Vienna shrinks from capital of a 52-million empire to the oversized metropolis of a 1.8-million state."
+  },
+  "anschluss-1938": {
+    "label": "Anschluss (Annexation of Austria)",
+    "labelShort": "Anschluss",
+    "description": "In March 1938 Nazi Germany annexes Austria. Viennese intellectuals — Freud, Zweig, Wittgenstein — flee into exile, and Vienna's cultural golden age comes to a definitive close."
+  }
+}
