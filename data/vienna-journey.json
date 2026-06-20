@@ -1,0 +1,719 @@
+[
+  {
+    "id": "mozart-figaro-1786",
+    "year": 1786,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2103,
+    "lng": 16.3618,
+    "work": "《费加罗的婚礼》首演",
+    "catalogue": "K. 492",
+    "genre": "歌剧",
+    "category": "music",
+    "person": "沃尔夫冈·阿马德乌斯·莫扎特",
+    "context": "1786年5月1日，莫扎特歌剧《费加罗的婚礼》在维也纳皇家宫廷剧院（今博格剧院前身所在地）首演。剧本由洛伦佐·达·彭特依博马舍同名讽刺喜剧改编——原著因批判贵族特权，已遭奥地利宫廷明令禁演。莫扎特将这场阶级博弈化为绝妙的音乐喜剧，皇帝约瑟夫二世亲临首演，观众屡屡要求安可，致使演出时长几乎翻倍。",
+    "meaning": "这部歌剧以笑声包裹政治批判，让即将到来的革命气息弥漫全场。它既是维也纳古典歌剧的顶峰，也预示着启蒙理想与旧秩序之间一触即发的张力——三年后，法国大革命爆发。莫扎特由此将维也纳确立为18世纪欧洲最重要的歌剧之都。",
+    "source": {
+      "label": "Wikipedia: The Marriage of Figaro",
+      "url": "https://en.wikipedia.org/wiki/The_Marriage_of_Figaro",
+      "summary": "K. 492，1786年5月1日于维也纳皇家宫廷剧院首演，达·彭特作词。"
+    },
+    "place": {
+      "name": "维也纳博格剧院（皇家宫廷剧院旧址）",
+      "address": "Dr.-Karl-Lueger-Ring 2, 1010 Wien",
+      "kind": "剧院",
+      "certainty": "较稳",
+      "note": "现博格剧院建于1888年，首演地旧皇家宫廷剧院已拆除，坐标为近似位置。",
+      "lat": 48.2103,
+      "lng": 16.3618,
+      "source": {
+        "label": "Burgtheater: History",
+        "url": "https://www.burgtheater.at/en/history"
+      }
+    },
+    "collections": ["vienna-classical"],
+    "links": [
+      {
+        "label": "Mozart Journey 莫扎特旅程",
+        "url": "https://moltpany.github.io/mozart-journey/"
+      }
+    ],
+    "listening": {
+      "target": "Le nozze di Figaro, K. 492",
+      "note": "推荐序曲与第二幕终曲，感受莫扎特如何将阶级矛盾化为音乐精华。",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart+Marriage+of+Figaro+K492",
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Marriage%20of%20Figaro"
+    }
+  },
+  {
+    "id": "beethoven-eroica-1804",
+    "year": 1804,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2043,
+    "lng": 16.3669,
+    "work": "《第三交响曲「英雄」》私人首演",
+    "catalogue": "Op. 55",
+    "genre": "交响曲",
+    "category": "music",
+    "person": "路德维希·凡·贝多芬",
+    "context": "1804年夏，贝多芬在维也纳洛布科维茨宫进行了《第三交响曲》的私人首演。这部曲子原本题献给拿破仑，但当贝多芬听闻拿破仑自立为帝后，愤而撕去扉页上的题词。交响曲以长达五十分钟的篇幅颠覆了古典形式的规模，开篇两记不协和和弦震惊了在场的维也纳听众。",
+    "meaning": "《英雄》是西方交响乐史的分水岭。它宣告英雄主义不再属于贵族与帝王，而属于人类精神本身。贝多芬将维也纳转化为新音乐语言的试验场，他的勇气直接催生了浪漫主义时代。",
+    "source": {
+      "label": "Wikipedia: Symphony No. 3 (Beethoven)",
+      "url": "https://en.wikipedia.org/wiki/Symphony_No._3_(Beethoven)",
+      "summary": "Op. 55，约1804年夏于洛布科维茨宫私人首演，公开首演为1805年4月7日。"
+    },
+    "place": {
+      "name": "洛布科维茨宫",
+      "address": "Lobkowitzplatz 2, 1010 Wien",
+      "kind": "宫殿（剧场）",
+      "certainty": "较稳",
+      "note": "洛布科维茨亲王是贝多芬的重要赞助人，多部重要作品在此私演。",
+      "lat": 48.2043,
+      "lng": 16.3669,
+      "source": {
+        "label": "Beethoven-Haus Bonn",
+        "url": "https://www.beethoven.de"
+      }
+    },
+    "collections": ["vienna-classical"],
+    "links": [
+      {
+        "label": "Beethoven Journey 贝多芬旅程",
+        "url": "https://moltpany.github.io/beethoven-journey/"
+      }
+    ],
+    "listening": {
+      "target": "Symphony No. 3 in E♭ major, Op. 55 \"Eroica\"",
+      "note": "推荐第一乐章与第二乐章「葬礼进行曲」，感受贝多芬对英雄与死亡的极致诠释。",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Beethoven+Symphony+3+Eroica",
+      "spotifySearch": "https://open.spotify.com/search/Beethoven%20Symphony%203%20Eroica"
+    }
+  },
+  {
+    "id": "schubert-winterreise-1827",
+    "year": 1827,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.1962,
+    "lng": 16.3610,
+    "work": "《冬之旅》",
+    "catalogue": "D. 911",
+    "genre": "艺术歌曲集",
+    "category": "music",
+    "person": "弗朗茨·舒伯特",
+    "context": "1827年，身患梅毒、日渐衰竭的舒伯特在维也纳完成了他最黑暗的声乐杰作《冬之旅》——为男高音与钢琴而作的24首联篇歌曲，诗词取自威廉·缪勒。同年11月，他在老朋友约翰·冯·斯潘的公寓里为亲友私演这组曲子，朋友们茫然困惑于其阴郁，只有舒伯特自己深感满意。",
+    "meaning": "《冬之旅》是浪漫主义音乐对孤独、失落与死亡最深刻的凝视。舒伯特次年便与世长辞，这部作品宛如他对维也纳——这座他既深爱又窒息其中的城市——的绝笔告别。",
+    "source": {
+      "label": "Wikipedia: Winterreise",
+      "url": "https://en.wikipedia.org/wiki/Winterreise",
+      "summary": "D. 911，1827年完成，诗词出自威廉·缪勒，共24曲，舒伯特生前亲历的最后一场私演约在1827年11月。"
+    },
+    "place": {
+      "name": "舒伯特最后的居所（凯腾布吕肯街6号）",
+      "address": "Kettenbrückengasse 6, 1040 Wien",
+      "kind": "故居",
+      "certainty": "较稳",
+      "note": "舒伯特于1828年11月在此去世，《冬之旅》完成于此前不久，现为舒伯特纪念馆。",
+      "lat": 48.1962,
+      "lng": 16.3610,
+      "source": {
+        "label": "Wien Museum: Schubert Sterbewohnung",
+        "url": "https://www.wienmuseum.at"
+      }
+    },
+    "collections": ["vienna-classical", "biedermeier-romantic"],
+    "listening": {
+      "target": "Winterreise, D. 911",
+      "note": "推荐第一曲《晚安》与第二十四曲《摇琴人》，感受旅途开始与终结的宿命循环。",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Schubert+Winterreise+D911",
+      "spotifySearch": "https://open.spotify.com/search/Schubert%20Winterreise"
+    }
+  },
+  {
+    "id": "strauss-blue-danube-1867",
+    "year": 1867,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2052,
+    "lng": 16.3913,
+    "work": "《蓝色多瑙河》首演",
+    "catalogue": "Op. 314",
+    "genre": "圆舞曲",
+    "category": "music",
+    "person": "约翰·施特劳斯二世",
+    "context": "1867年2月15日，《蓝色多瑙河》（An der schönen blauen Donau）在维也纳索菲恩萨尔音乐厅由维也纳男声合唱协会首演。首演时伴有歌词，反响平淡；几周后以纯管弦乐版本在巴黎世界博览会演出，才引发空前轰动。奥地利在普奥战争失败后急需重建民族自信，这首圆舞曲恰逢其时。",
+    "meaning": "《蓝色多瑙河》逐渐成为维也纳乃至奥地利的精神象征。每年维也纳新年音乐会以它作为返场曲目，是对失落帝国时代优雅记忆的仪式性召唤。它将多瑙河从地理概念升华为集体情感的容器。",
+    "source": {
+      "label": "Wikipedia: The Blue Danube",
+      "url": "https://en.wikipedia.org/wiki/The_Blue_Danube",
+      "summary": "Op. 314，1867年2月15日于维也纳索菲恩萨尔首演，原版附有约瑟夫·魏尔的合唱歌词。"
+    },
+    "place": {
+      "name": "索菲恩萨尔音乐厅（旧址）",
+      "address": "Marxergasse 17, 1030 Wien",
+      "kind": "音乐厅（已毁）",
+      "certainty": "较稳",
+      "note": "索菲恩萨尔于二战中被炸毁，现址已重建为其他建筑，坐标为近似位置。",
+      "lat": 48.2052,
+      "lng": 16.3913,
+      "source": {
+        "label": "Österreichisches Musiklexikon",
+        "url": "https://www.musiklexikon.ac.at"
+      }
+    },
+    "collections": ["biedermeier-romantic"],
+    "listening": {
+      "target": "An der schönen blauen Donau, Op. 314",
+      "note": "推荐卡拉扬指挥的维也纳爱乐版本，感受这首圆舞曲对帝都优雅的完美诠释。",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Strauss+Blue+Danube+Op314",
+      "spotifySearch": "https://open.spotify.com/search/Strauss%20Blue%20Danube"
+    }
+  },
+  {
+    "id": "mahler-das-lied-1909",
+    "year": 1909,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.1938,
+    "lng": 16.3799,
+    "work": "《大地之歌》（完稿）",
+    "catalogue": "无编号",
+    "genre": "交响套曲",
+    "category": "music",
+    "person": "古斯塔夫·马勒",
+    "context": "1907至1909年，马勒在维也纳遭遇人生最惨烈的打击：长女病逝、自己确诊致命心脏病、并被迫辞去维也纳宫廷歌剧院总监一职。他在这双重创痛中谱写了《大地之歌》，歌词取自中国唐诗德译本《中国之笛》，将李白、王维等人的诗句化为对生死与永别的极致沉思。",
+    "meaning": "《大地之歌》是马勒对维也纳、对人生的终极告别。最后一曲《告别》长达半小时，以「永远……永远」的尾音消散入寂。它将东方哲学的无常之美注入西方交响乐，创造出人类音乐史上最动人的死亡冥想之一。",
+    "source": {
+      "label": "Wikipedia: Das Lied von der Erde",
+      "url": "https://en.wikipedia.org/wiki/Das_Lied_von_der_Erde",
+      "summary": "约完稿于1909年，1911年11月20日由布鲁诺·瓦尔特在慕尼黑指挥首演（马勒身后）。"
+    },
+    "place": {
+      "name": "马勒维也纳故居（奥恩布鲁格街2号）",
+      "address": "Auenbruggergasse 2, 1040 Wien",
+      "kind": "故居",
+      "certainty": "较稳",
+      "note": "马勒在此居住期间完成了《大地之歌》，距贝尔维德宫上园步行约15分钟。",
+      "lat": 48.1938,
+      "lng": 16.3799,
+      "source": {
+        "label": "Mahler Society Vienna",
+        "url": "https://www.gustav-mahler.eu"
+      }
+    },
+    "collections": ["fin-de-siecle"],
+    "listening": {
+      "target": "Das Lied von der Erde (Der Abschied)",
+      "note": "最后一曲《告别》，建议深夜独听，感受那句「永远……永远」如何将生命化为回声。",
+      "youtubeSearch": "https://www.youtube.com/results?search_query=Mahler+Das+Lied+von+der+Erde+Abschied",
+      "spotifySearch": "https://open.spotify.com/search/Mahler%20Das%20Lied%20von%20der%20Erde"
+    }
+  },
+  {
+    "id": "klimt-beethoven-frieze-1902",
+    "year": 1902,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.1992,
+    "lng": 16.3687,
+    "work": "《贝多芬壁画》",
+    "catalogue": "绘画",
+    "genre": "混合材料壁画（卡塞因颜料、金箔、半宝石）",
+    "category": "visual-art",
+    "person": "古斯塔夫·克林姆特",
+    "context": "1902年，维也纳分离派为纪念贝多芬举办第十四届展览，克林姆特创作了这幅长达34米的壁画。画作以贝多芬《第九交响曲》的叙事为线索，描绘人类对幸福的渴望、与恶魔的搏斗，以及最终在艺术中找到救赎。展览中央陈列着马克斯·克林格尔雕刻的贝多芬像，壁画环绕其四壁。",
+    "meaning": "这幅壁画将音乐、绘画与建筑融为一体，是分离派「总体艺术」（Gesamtkunstwerk）理念的完美实践。克林姆特用它宣告：在一个价值崩解的时代，唯有艺术能赋予人类尊严。壁画如今永久陈列于分离派展览馆地下室，每天仍散发着世纪末维也纳那股特有的焦灼之美。",
+    "source": {
+      "label": "Vienna Secession: Beethoven Frieze",
+      "url": "https://www.secession.at/en/collection/beethoven-frieze/",
+      "summary": "1902年第十四届分离派展览创作，混合材料（卡塞因颜料、金箔、半宝石等），高2.15米，周长34米，现永久陈列于分离派展览馆地下室。"
+    },
+    "place": {
+      "name": "维也纳分离派展览馆（Secession）",
+      "address": "Friedrichstraße 12, 1010 Wien",
+      "kind": "展览馆",
+      "certainty": "确定",
+      "lat": 48.1992,
+      "lng": 16.3687,
+      "source": {
+        "label": "Vienna Secession",
+        "url": "https://www.secession.at"
+      }
+    },
+    "collections": ["fin-de-siecle"]
+  },
+  {
+    "id": "klimt-der-kuss-1908",
+    "year": 1908,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.1917,
+    "lng": 16.3803,
+    "work": "《吻》",
+    "catalogue": "绘画",
+    "genre": "油画与金箔，180×180 cm",
+    "category": "visual-art",
+    "person": "古斯塔夫·克林姆特",
+    "context": "1907至1908年间，克林姆特在其维也纳画室完成了《吻》（Der Kuss）。画面中一对恋人跪于花丛边缘，男女均裹于金色锦袍，面孔隐于接吻的瞬间——他的侧颜清晰，她的眼神沉醉半闭。克林姆特大量使用真正的金箔，延续其「黄金时期」的奢华风格。",
+    "meaning": "《吻》是克林姆特最广为人知的作品，也是整个维也纳世纪末的视觉符号。它将情欲、死亡与艺术救赎压缩于一个近乎正方形的画面，令人同时感受到终极的安慰与悬崖边缘的战栗。奥地利政府购入此画后将其永久陈列于贝尔维德宫，使维也纳成为这幅「最贵的吻」唯一的家。",
+    "source": {
+      "label": "Belvedere Museum: Der Kuss",
+      "url": "https://www.belvedere.at/en/klimt-kiss",
+      "summary": "约1907–1908年完成，油画与金箔，180×180 cm，奥地利国家财产，永久陈列于维也纳上贝尔维德宫。"
+    },
+    "place": {
+      "name": "维也纳贝尔维德宫（上宫）",
+      "address": "Prinz-Eugen-Straße 27, 1030 Wien",
+      "kind": "美术馆",
+      "certainty": "确定",
+      "note": "画作现藏于此；创作地点为克林姆特当时位于约瑟夫施塔特街的画室。",
+      "lat": 48.1917,
+      "lng": 16.3803,
+      "source": {
+        "label": "Belvedere Museum",
+        "url": "https://www.belvedere.at"
+      }
+    },
+    "collections": ["fin-de-siecle"]
+  },
+  {
+    "id": "schiele-tod-und-maedchen-1915",
+    "year": 1915,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.1998,
+    "lng": 16.3701,
+    "work": "《死亡与少女》",
+    "catalogue": "绘画",
+    "genre": "油画，150×180 cm",
+    "category": "visual-art",
+    "person": "埃贡·席勒",
+    "context": "1915年，席勒在被征召入伍前夕完成《死亡与少女》（Tod und Mädchen）。画中一名骷髅般的男性（席勒自画像）紧紧抱住一名软弱倒伏的女性，她闭目沉沦，他的眼神空洞而执拗——这是在生死边缘的绝望拥抱。席勒随即应征参加一战，在战场上同时经历了真实的死亡。",
+    "meaning": "席勒将克林姆特「黄金时期」的感官美学彻底撕裂，代之以骷髅般的线条与生死缠绕的原始张力。这幅画是奥地利表现主义的核心作品，也是世纪末维也纳对战争与死亡预感的最直白表达。席勒死于1918年西班牙流感，年仅28岁。",
+    "source": {
+      "label": "Belvedere Museum: Tod und Mädchen",
+      "url": "https://www.belvedere.at",
+      "summary": "1915年完成，油画，150×180 cm，现藏于维也纳上贝尔维德宫。"
+    },
+    "place": {
+      "name": "维也纳贝尔维德宫（上宫）",
+      "address": "Prinz-Eugen-Straße 27, 1030 Wien",
+      "kind": "美术馆",
+      "certainty": "确定",
+      "note": "席勒作品多藏于此，创作地点为其维也纳工作室。",
+      "lat": 48.1917,
+      "lng": 16.3803,
+      "source": {
+        "label": "Belvedere Museum",
+        "url": "https://www.belvedere.at"
+      }
+    },
+    "collections": ["fin-de-siecle"]
+  },
+  {
+    "id": "kokoschka-traeumende-knaben-1908",
+    "year": 1908,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2013,
+    "lng": 16.3653,
+    "work": "《沉睡的少年》",
+    "catalogue": "绘画·书籍",
+    "genre": "彩色石版画图画书",
+    "category": "visual-art",
+    "person": "奥斯卡·柯柯施卡",
+    "context": "1908年，年仅22岁的柯柯施卡受委托为维也纳工坊（Wiener Werkstätte）创作儿童图画书《沉睡的少年》，并于维也纳艺术展上展出。这本图画书以梦境般的色彩与变形的人体线条，暗藏情欲与死亡的隐喻，引发维也纳卫道士的强烈反弹，却令克林姆特赞不绝口。",
+    "meaning": "《沉睡的少年》宣告了奥地利表现主义的诞生。柯柯施卡以它向维也纳分离派的装饰美学宣战，提出：艺术应当揭示人类内心最原始的恐惧与欲望，而非美化它们。这本「图画书」因此成为现代艺术史上最早的表现主义宣言之一。",
+    "source": {
+      "label": "Wikipedia: Die träumenden Knaben",
+      "url": "https://en.wikipedia.org/wiki/Die_tr%C3%A4umenden_Knaben",
+      "summary": "1908年完成，原为彩色石版画图画书，献给克林姆特，维也纳艺术展上展出后引发争议。"
+    },
+    "place": {
+      "name": "维也纳应用艺术博物馆（MAK）",
+      "address": "Stubenring 5, 1010 Wien",
+      "kind": "博物馆",
+      "certainty": "较稳",
+      "note": "维也纳工坊（Wiener Werkstätte）与MAK关系密切，该书的展览及藏品均与此机构相关。",
+      "lat": 48.2013,
+      "lng": 16.3793,
+      "source": {
+        "label": "MAK Vienna",
+        "url": "https://www.mak.at"
+      }
+    },
+    "collections": ["fin-de-siecle"]
+  },
+  {
+    "id": "secession-building-1898",
+    "year": 1898,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.1992,
+    "lng": 16.3687,
+    "work": "维也纳分离派展览馆",
+    "catalogue": "建筑",
+    "genre": "青春艺术风格（Jugendstil）",
+    "category": "architecture",
+    "person": "约瑟夫·马里亚·奥尔布里希",
+    "context": "1897年，古斯塔夫·克林姆特等艺术家脱离保守的艺术家协会，创立「维也纳分离派」，宣告「每个时代拥有自己的艺术，艺术拥有自己的自由」。次年，建筑师约瑟夫·马里亚·奥尔布里希设计的展览馆落成——白色方块主体顶部冠以金色镂空月桂球，维也纳市民戏称「金色卷心菜」。",
+    "meaning": "分离派展览馆是奥托·瓦格纳「现代建筑服务于现代生活」理念的第一次完整实践。它刻意拒绝历史主义的堆砌装饰，以简洁几何形体和有机图案宣言：新世纪需要新形式。这栋建筑至今仍作为当代艺术展览空间使用，正是分离派自由精神的最好传承。",
+    "source": {
+      "label": "Vienna Secession: Building",
+      "url": "https://www.secession.at/en/building/",
+      "summary": "1897年分离派成立，奥尔布里希设计，1898年竣工，Friedrichstraße 12，融合新艺术运动与几何主义。"
+    },
+    "place": {
+      "name": "维也纳分离派展览馆",
+      "address": "Friedrichstraße 12, 1010 Wien",
+      "kind": "展览馆·建筑",
+      "certainty": "确定",
+      "lat": 48.1992,
+      "lng": 16.3687,
+      "source": {
+        "label": "Vienna Secession",
+        "url": "https://www.secession.at"
+      }
+    },
+    "collections": ["fin-de-siecle"]
+  },
+  {
+    "id": "otto-wagner-karlsplatz-1899",
+    "year": 1899,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.1986,
+    "lng": 16.3698,
+    "work": "卡尔斯广场城市铁路候车亭",
+    "catalogue": "建筑",
+    "genre": "青春艺术风格市政建筑",
+    "category": "architecture",
+    "person": "奥托·瓦格纳",
+    "context": "1890年代，奥托·瓦格纳受委托为维也纳城市铁路（Stadtbahn）设计一系列站台及候车亭。卡尔斯广场的两座对称候车亭（约1899年）是其中最具代表性的杰作：钢铁骨架外覆白色大理石板，立面以金色向日葵与植物纹样装点，将工业功能性与新艺术运动的有机美学完美融合。",
+    "meaning": "这两座候车亭是「现代建筑为现代城市服务」的宣言：城市基础设施可以是美的，可以彰显城市文化而非掩盖它。瓦格纳开创的维也纳现代主义直接影响了阿道夫·鲁斯、约瑟夫·霍夫曼等一代建筑师，并预告了20世纪功能主义建筑的到来。",
+    "source": {
+      "label": "Wien Museum: Otto Wagner",
+      "url": "https://www.wienmuseum.at/en/topics/otto-wagner",
+      "summary": "约1899年竣工，卡尔斯广场一对候车亭，钢铁结构覆大理石面板，金色植物纹样装饰，现为维也纳市博物馆分馆之一。"
+    },
+    "place": {
+      "name": "卡尔斯广场·奥托·瓦格纳候车亭",
+      "address": "Karlsplatz, 1040 Wien",
+      "kind": "历史建筑",
+      "certainty": "确定",
+      "lat": 48.1986,
+      "lng": 16.3698,
+      "source": {
+        "label": "Wien Museum: Karlsplatz Pavilion",
+        "url": "https://www.wienmuseum.at"
+      }
+    },
+    "collections": ["fin-de-siecle"]
+  },
+  {
+    "id": "loos-haus-1911",
+    "year": 1911,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2074,
+    "lng": 16.3665,
+    "work": "鲁斯楼（无眉之屋）",
+    "catalogue": "建筑",
+    "genre": "现代主义建筑",
+    "category": "architecture",
+    "person": "阿道夫·鲁斯",
+    "context": "1910至1911年，阿道夫·鲁斯在迈克尔广场（Michaelerplatz）正对霍夫堡宫门处，建成了一栋彻底摒弃窗楣装饰的商业楼房。维也纳市民震惊于其赤裸的立面，称之为「无眉之屋」；弗朗茨·约瑟夫皇帝据说下令关闭面对此楼的窗帘，拒绝直视这个「怪物」。鲁斯坚持其理念：装饰是罪恶（Ornament ist Verbrechen）。",
+    "meaning": "鲁斯楼是西方建筑史上决定性的时刻之一：它正面挑战了千年来建筑必须「美化」自身的传统，宣告功能即形式。这栋楼与霍夫堡宫的对峙，是现代精神与帝国遗产最戏剧性的正面交锋。它直接影响了包豪斯及整个现代主义运动的理念基础。",
+    "source": {
+      "label": "Wikipedia: Looshaus",
+      "url": "https://en.wikipedia.org/wiki/Looshaus",
+      "summary": "1910–1911年建成，迈克尔广场3号，无装饰立面，引发轩然大波，鲁斯因此被迫补加花盆以调解争议。"
+    },
+    "place": {
+      "name": "鲁斯楼（Looshaus）",
+      "address": "Michaelerplatz 3, 1010 Wien",
+      "kind": "历史建筑",
+      "certainty": "确定",
+      "lat": 48.2074,
+      "lng": 16.3665,
+      "source": {
+        "label": "Looshaus Vienna",
+        "url": "https://www.looshaus.at"
+      }
+    },
+    "collections": ["fin-de-siecle", "early-modern"]
+  },
+  {
+    "id": "freud-hysterie-1895",
+    "year": 1895,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2187,
+    "lng": 16.3611,
+    "work": "《癔症研究》",
+    "catalogue": "著作",
+    "genre": "精神分析理论著作",
+    "category": "psychoanalysis",
+    "person": "西格蒙德·弗洛伊德 & 约瑟夫·布罗伊尔",
+    "context": "1895年，弗洛伊德与维也纳名医约瑟夫·布罗伊尔合著出版《癔症研究》（Studien über Hysterie），书中收录了著名的「安娜·O」等数个病例。他们提出「谈话疗法」：让病人自由讲述压抑的记忆，症状便能随之消解。这是精神分析诞生的起点。",
+    "meaning": "弗洛伊德与布罗伊尔共同开凿了通往无意识的第一条隧道。在一个将理性与秩序视为最高价值的维也纳，他们的工作宣告：人类行为的真正动力隐藏在意识的水面之下。这本书改变了人类认识自身的方式。",
+    "source": {
+      "label": "Wikipedia: Studies on Hysteria",
+      "url": "https://en.wikipedia.org/wiki/Studies_on_Hysteria",
+      "summary": "1895年出版，弗洛伊德与布罗伊尔合著，包含五个病例研究，奠定精神分析的临床基础。"
+    },
+    "place": {
+      "name": "弗洛伊德博物馆（贝格街19号）",
+      "address": "Berggasse 19, 1090 Wien",
+      "kind": "故居·博物馆",
+      "certainty": "确定",
+      "note": "弗洛伊德在贝格街19号生活与工作长达47年（1891–1938），诊室及书房完好保留。",
+      "lat": 48.2187,
+      "lng": 16.3611,
+      "source": {
+        "label": "Freud Museum Vienna",
+        "url": "https://www.freud-museum.at"
+      }
+    },
+    "collections": ["fin-de-siecle"]
+  },
+  {
+    "id": "freud-traumdeutung-1899",
+    "year": 1899,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2187,
+    "lng": 16.3611,
+    "work": "《梦的解析》",
+    "catalogue": "著作",
+    "genre": "精神分析理论著作",
+    "category": "psychoanalysis",
+    "person": "西格蒙德·弗洛伊德",
+    "context": "1899年11月（出版商注年为1900年），弗洛伊德在贝格街19号完成《梦的解析》（Die Traumdeutung）。书中他提出「梦是通往无意识的皇家大道」，并系统阐述了俄狄浦斯情结、愿望满足机制等核心理论。首版仅售出351册，八年内才告售罄，但它终将改变整个20世纪。",
+    "meaning": "《梦的解析》是现代思想史上最具颠覆性的著作之一。它宣告：人类最私密的夜间幻象并非随机噪音，而是被压抑的欲望与恐惧的密码化表达。这本书在维也纳写就，却属于全人类——它重新定义了「自我」的边界。",
+    "source": {
+      "label": "Wikipedia: The Interpretation of Dreams",
+      "url": "https://en.wikipedia.org/wiki/The_Interpretation_of_Dreams",
+      "summary": "德文版1899年11月出版（注年1900年），首版600册，完售历时八年，此后被译为多种语言，成为20世纪最重要著作之一。"
+    },
+    "place": {
+      "name": "弗洛伊德博物馆（贝格街19号）",
+      "address": "Berggasse 19, 1090 Wien",
+      "kind": "故居·博物馆",
+      "certainty": "确定",
+      "lat": 48.2187,
+      "lng": 16.3611,
+      "source": {
+        "label": "Freud Museum Vienna",
+        "url": "https://www.freud-museum.at"
+      }
+    },
+    "collections": ["fin-de-siecle"]
+  },
+  {
+    "id": "adler-nervoeser-charakter-1912",
+    "year": 1912,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2092,
+    "lng": 16.3651,
+    "work": "《神经质性格》",
+    "catalogue": "著作",
+    "genre": "个体心理学著作",
+    "category": "psychoanalysis",
+    "person": "阿尔弗雷德·阿德勒",
+    "context": "1911年，阿德勒因强调社会与权力因素而非性驱力，与弗洛伊德决裂，另立「个体心理学」学派。次年出版《神经质性格》（Über den nervösen Charakter），提出「自卑感」与「追求优越」是人类行为的两大核心动力。阿德勒在维也纳中央咖啡馆等场所主持公开讨论，受众远超弗洛伊德的封闭诊室。",
+    "meaning": "阿德勒将精神分析从私密诊室带向公共社会。他率先将心理学应用于教育和社区干预，是现代积极心理学的重要先驱。他的「自卑—超越」理论深刻影响了20世纪的教育哲学与流行心理学，比弗洛伊德的理论更广泛地渗入日常语言。",
+    "source": {
+      "label": "Wikipedia: Alfred Adler",
+      "url": "https://en.wikipedia.org/wiki/Alfred_Adler",
+      "summary": "《神经质性格》1912年出版，奠定个体心理学基础，阿德勒曾在维也纳中央咖啡馆主持心理学研讨。"
+    },
+    "place": {
+      "name": "维也纳中央咖啡馆",
+      "address": "Herrengasse 14, 1010 Wien",
+      "kind": "咖啡馆·文化地标",
+      "certainty": "较稳",
+      "note": "中央咖啡馆是阿德勒、克劳斯、托洛茨基等维也纳知识分子的常聚之所。",
+      "lat": 48.2092,
+      "lng": 16.3651,
+      "source": {
+        "label": "Café Central Vienna",
+        "url": "https://www.cafecentral.wien"
+      }
+    },
+    "collections": ["fin-de-siecle", "early-modern"]
+  },
+  {
+    "id": "wittgenstein-tractatus-1921",
+    "year": 1921,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.1946,
+    "lng": 16.3810,
+    "work": "《逻辑哲学论》",
+    "catalogue": "著作",
+    "genre": "哲学著作",
+    "category": "philosophy",
+    "person": "路德维希·维特根斯坦",
+    "context": "1921年，出身维也纳最富有家族之一的路德维希·维特根斯坦在德国《自然科学年刊》发表《逻辑哲学论》（Tractatus Logico-Philosophicus）。这部以编号命题构成的奇特著作，以「凡是能够说的，都能够说清楚；对于不能说的，必须保持沉默」作结。维特根斯坦认为哲学的任务就此完成，随即辞去剑桥讲师职务，去奥地利山村小学教书。",
+    "meaning": "《逻辑哲学论》以其对语言极限的追问，开启了20世纪分析哲学最重要的传统之一，同时也直接激发了维也纳学圈的逻辑实证主义运动。维特根斯坦本人的维也纳根源——他成长的宫殿由克林姆特装饰——使他身上同时汇聚了分离派美学与分析哲学的奇异基因。",
+    "source": {
+      "label": "Wikipedia: Tractatus Logico-Philosophicus",
+      "url": "https://en.wikipedia.org/wiki/Tractatus_Logico-Philosophicus",
+      "summary": "1921年德文版发表于《自然科学年刊》，1922年英译本出版，罗素作序，被誉为20世纪最重要的哲学著作之一。"
+    },
+    "place": {
+      "name": "维特根斯坦家族宫殿旧址（阿莱加街16号）",
+      "address": "Argentinierstraße 16, 1040 Wien",
+      "kind": "历史建筑",
+      "certainty": "较稳",
+      "note": "维特根斯坦在此度过童年，父亲卡尔·维特根斯坦是奥地利钢铁大亨，宫殿内悬挂克林姆特画作，现为传媒文化机构驻地。",
+      "lat": 48.1946,
+      "lng": 16.3810,
+      "source": {
+        "label": "Wikipedia: Karl Wittgenstein",
+        "url": "https://en.wikipedia.org/wiki/Karl_Wittgenstein"
+      }
+    },
+    "collections": ["early-modern"]
+  },
+  {
+    "id": "vienna-circle-1929",
+    "year": 1929,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2132,
+    "lng": 16.3564,
+    "work": "《维也纳学圈的科学世界观》宣言",
+    "catalogue": "著作",
+    "genre": "哲学宣言",
+    "category": "philosophy",
+    "person": "维也纳学圈（石里克、卡尔纳普、纽拉特等）",
+    "context": "1924至1936年间，物理学家/哲学家莫里茨·石里克在维也纳大学主持每周一次的哲学研讨——后世称为「维也纳学圈」。成员包括鲁道夫·卡尔纳普、奥托·纽拉特、汉斯·哈恩等人。1929年他们发表宣言《维也纳学圈的科学世界观》，提出逻辑实证主义：唯有逻辑和经验科学能产生有意义的知识，形而上学是无意义的命题集合。",
+    "meaning": "维也纳学圈是20世纪最具影响力的哲学运动之一，将科学方法论引入哲学核心，深刻影响了英美分析哲学传统。然而1936年石里克被纳粹同情者学生枪杀，成员陆续流亡英美，将逻辑实证主义的火种带向世界——这是维也纳在1938年帝国终结前的最后一次思想输出。",
+    "source": {
+      "label": "Stanford Encyclopedia: Vienna Circle",
+      "url": "https://plato.stanford.edu/entries/vienna-circle/",
+      "summary": "1929年宣言《Wissenschaftliche Weltauffassung》发表，核心成员包括石里克、卡尔纳普、纽拉特、哈恩，1936年石里克遇刺后学圈解散，成员多流亡至英美。"
+    },
+    "place": {
+      "name": "维也纳大学（主楼）",
+      "address": "Universitätsring 1, 1010 Wien",
+      "kind": "大学",
+      "certainty": "较稳",
+      "note": "维也纳学圈的例会主要在维也纳大学数学研究所举行。",
+      "lat": 48.2132,
+      "lng": 16.3564,
+      "source": {
+        "label": "University of Vienna",
+        "url": "https://www.univie.ac.at"
+      }
+    },
+    "collections": ["early-modern"]
+  },
+  {
+    "id": "schnitzler-leutnant-gustl-1900",
+    "year": 1900,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2177,
+    "lng": 16.3600,
+    "work": "《古斯特尔中尉》",
+    "catalogue": "著作",
+    "genre": "短篇小说（意识流）",
+    "category": "literature",
+    "person": "阿图尔·施尼茨勒",
+    "context": "1900年圣诞节，施尼茨勒在《新自由新闻》上发表中篇小说《古斯特尔中尉》——德语文学史上第一部完整意识流叙事作品。全文以奥匈帝国军官古斯特尔一夜间的内心独白展开，揭示其浮夸、怯懦与对荣誉的病态执念。奥地利军方愤怒，剥夺了施尼茨勒的军队医生预备役军衔。",
+    "meaning": "施尼茨勒比弗洛伊德更早在文学中实践无意识的呈现。这部小说以军人荣誉守则为靶，解剖了哈布斯堡帝国的精神危机：一个以门面维系运转的社会，其内部已是空洞与腐败。弗洛伊德本人称施尼茨勒是他的「文学分身」。",
+    "source": {
+      "label": "Wikipedia: Leutnant Gustl",
+      "url": "https://en.wikipedia.org/wiki/Lieutenant_Gustl",
+      "summary": "1900年12月25日发表于《新自由新闻》，德语文学首部意识流小说，施尼茨勒因此被剥夺预备役军衔。"
+    },
+    "place": {
+      "name": "施尼茨勒居所旧址（弗朗克街1号）",
+      "address": "Frankgasse 1, 1090 Wien",
+      "kind": "历史建筑",
+      "certainty": "较稳",
+      "note": "施尼茨勒在维也纳第9区开设诊所并写作，与弗洛伊德的贝格街仅相距数百米。",
+      "lat": 48.2177,
+      "lng": 16.3600,
+      "source": {
+        "label": "Arthur Schnitzler Research Association",
+        "url": "https://www.arthurschnitzler.at"
+      }
+    },
+    "collections": ["fin-de-siecle"]
+  },
+  {
+    "id": "karl-kraus-die-fackel-1899",
+    "year": 1899,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2013,
+    "lng": 16.3729,
+    "work": "《火炬》杂志（创刊）",
+    "catalogue": "著作",
+    "genre": "文学评论刊物",
+    "category": "literature",
+    "person": "卡尔·克劳斯",
+    "context": "1899年4月，讽刺作家卡尔·克劳斯在维也纳创办《火炬》（Die Fackel）杂志。从第1期到1936年停刊，这份小册子（共922期）几乎由克劳斯一人撰写，以尖刻辛辣的语言批判维也纳新闻界的腐败、哈布斯堡官僚体制、以及一战的爆发。他的战争剧《人类最后的日子》（Die letzten Tage der Menschheit）长达800页，被认为无法搬演，只适合「火星上的剧院」。",
+    "meaning": "克劳斯是维也纳最犀利的道德之声。在一个以咖啡馆优雅和圆舞曲掩盖帝国腐朽的城市，他坚持用语言的精确性对抗一切谎言。他对新闻语言的批判今日读来惊人地现代，是每一个信息时代读者的必备抗毒剂。",
+    "source": {
+      "label": "Wikipedia: Die Fackel",
+      "url": "https://en.wikipedia.org/wiki/Die_Fackel",
+      "summary": "1899年创刊，1936年停刊，共922期，奥地利国家图书馆已将全部期次数字化开放在线阅读。"
+    },
+    "place": {
+      "name": "维也纳音乐之友协会附近（克劳斯居所区域）",
+      "address": "Lothringerstraße 6, 1030 Wien",
+      "kind": "历史建筑",
+      "certainty": "较稳",
+      "note": "克劳斯在此居住多年，与维也纳音乐中心区仅一街之隔。",
+      "lat": 48.2013,
+      "lng": 16.3729,
+      "source": {
+        "label": "Austrian National Library: Die Fackel Online",
+        "url": "https://fackel.oeaw.ac.at"
+      }
+    },
+    "collections": ["fin-de-siecle", "early-modern"]
+  },
+  {
+    "id": "hofmannsthal-lord-chandos-1902",
+    "year": 1902,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2103,
+    "lng": 16.3618,
+    "work": "《钱多斯勋爵的书信》",
+    "catalogue": "著作",
+    "genre": "虚构书信·散文",
+    "category": "literature",
+    "person": "胡戈·冯·霍夫曼斯塔尔",
+    "context": "1902年，年仅28岁的霍夫曼斯塔尔在维也纳发表《钱多斯勋爵的书信》（Brief des Lord Chandos）。这是一封虚构书信，主人公——一位伊丽莎白时代的英国贵族——向培根爵士坦白自己永久失去了用语言组织世界的能力：词语在他口中分崩离析，化为碎片，失去意义。霍夫曼斯塔尔借此向他早年天才诗人的身份告别。",
+    "meaning": "《钱多斯书信》是现代主义文学的奠基宣言之一：语言不再是透明的工具，而是有其自身断裂与边界的系统。它以书信体表达了维也纳世纪末知识分子最深的焦虑——一个旧世界正在瓦解，而新的语言尚未生成。这篇文章被公认为20世纪文学与哲学的共同起点。",
+    "source": {
+      "label": "Wikipedia: Ein Brief (Hofmannsthal)",
+      "url": "https://en.wikipedia.org/wiki/Ein_Brief_(Hofmannsthal)",
+      "summary": "1902年10月18日与19日发表于柏林《每日新闻》，霍夫曼斯塔尔以此告别早年抒情诗人身份，转向戏剧创作。"
+    },
+    "place": {
+      "name": "维也纳博格剧院",
+      "address": "Dr.-Karl-Lueger-Ring 2, 1010 Wien",
+      "kind": "剧院",
+      "certainty": "较稳",
+      "note": "霍夫曼斯塔尔与博格剧院关系密切，是维也纳文学圈的核心人物，此作虽发表于柏林报章，属其维也纳创作时期。",
+      "lat": 48.2103,
+      "lng": 16.3618,
+      "source": {
+        "label": "Österreichische Nationalbibliothek: Hofmannsthal",
+        "url": "https://www.onb.ac.at"
+      }
+    },
+    "collections": ["fin-de-siecle"]
+  }
+]

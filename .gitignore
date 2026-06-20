@@ -1,0 +1,6 @@
+.playwright-cli/
+.superpowers/
+.worktrees/
+
+*.log
+*.tmp

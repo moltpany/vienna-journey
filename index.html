@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vienna Journey · 维也纳文化地图</title>
+  <meta name="description" content="一张维也纳的文化地图：音乐、艺术、建筑、哲学、精神分析、文学，1780–1938年帝国黄金时代的思想版图。" />
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ── HEADER ────────────────────────────────────── -->
+<header id="header">
+  <div id="site-title">Vienna Journey<span>维也纳文化地图</span></div>
+
+  <div id="category-filters">
+    <button class="cat-btn active" data-cat="music">
+      <span class="dot"></span>音乐
+    </button>
+    <button class="cat-btn active" data-cat="visual-art">
+      <span class="dot"></span>视觉艺术
+    </button>
+    <button class="cat-btn active" data-cat="architecture">
+      <span class="dot"></span>建筑
+    </button>
+    <button class="cat-btn active" data-cat="psychoanalysis">
+      <span class="dot"></span>精神分析
+    </button>
+    <button class="cat-btn active" data-cat="philosophy">
+      <span class="dot"></span>哲学
+    </button>
+    <button class="cat-btn active" data-cat="literature">
+      <span class="dot"></span>文学
+    </button>
+  </div>
+
+  <input id="search-box" type="search" placeholder="搜索作品或人物…" />
+</header>
+
+<!-- ── MAIN LAYOUT ────────────────────────────────── -->
+<div id="layout">
+
+  <!-- MAP -->
+  <div id="map-container">
+    <div id="map"></div>
+  </div>
+
+  <!-- DETAIL PANEL -->
+  <aside id="detail-panel">
+    <div id="detail-empty">
+      <div class="empty-icon">🗺</div>
+      <p>点击地图上的标记<br>或时间轴上的节点<br>探索维也纳的文化版图</p>
+    </div>
+
+    <div id="detail-content">
+      <div id="detail-header">
+        <div class="detail-cat-badge" id="detail-badge">
+          <span class="dot" id="detail-badge-dot"></span>
+          <span id="detail-badge-label"></span>
+        </div>
+        <div id="detail-work"></div>
+        <div id="detail-person"></div>
+        <div id="detail-meta"></div>
+      </div>
+
+      <div id="detail-body">
+        <div class="detail-section" id="section-context">
+          <div class="detail-section-label">背景</div>
+          <p id="detail-context"></p>
+        </div>
+
+        <div class="detail-divider"></div>
+
+        <div class="detail-section" id="section-meaning">
+          <div class="detail-section-label">意义</div>
+          <p id="detail-meaning"></p>
+        </div>
+
+        <div class="detail-divider"></div>
+
+        <div class="detail-section" id="section-place">
+          <div class="detail-section-label">地点</div>
+          <div class="detail-place-block" id="detail-place"></div>
+        </div>
+
+        <div class="detail-section" id="section-links" style="display:none">
+          <div class="detail-section-label">延伸阅读</div>
+          <div class="detail-links" id="detail-links"></div>
+        </div>
+
+        <div class="detail-section" id="section-source">
+          <div class="detail-section-label">来源</div>
+          <div class="detail-source" id="detail-source"></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- ── TIMELINE ───────────────────────────────────── -->
+<div id="timeline-bar">
+  <div id="timeline-inner">
+    <div id="timeline-axis"></div>
+    <!-- populated by JS -->
+  </div>
+</div>
+
+<!-- ── MILESTONE TOOLTIP ──────────────────────────── -->
+<div id="milestone-tooltip">
+  <div class="ms-year" id="ms-year"></div>
+  <div class="ms-label" id="ms-label"></div>
+  <div class="ms-desc" id="ms-desc"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
