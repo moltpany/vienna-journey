@@ -466,12 +466,13 @@ html, body {
   #site-title { width: 100%; }
   #category-filters { overflow-x: auto; }
   #search-box { width: 100%; }
-  #layout { flex-direction: column; }
+  #layout { flex-direction: column; overflow: hidden; }
   #map-container { flex: 1; min-height: 0; }
-  /* On phones the detail opens as a full-screen, fully-scrollable sheet
-     instead of a cramped half-height strip; the in-panel button returns to the map. */
+  /* On phones the detail slides up over the map/list area only — the header
+     (with 地图/列表 + language/theme) and the timeline stay visible and usable.
+     It scrolls internally; tap a view button or the in-panel button to return. */
   #detail-panel {
-    position: fixed;
+    position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;

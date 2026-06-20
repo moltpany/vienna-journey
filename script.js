@@ -358,6 +358,7 @@ function setView(view) {
     b.classList.toggle('active', b.dataset.view === view);
   });
   document.body.classList.toggle('view-list', view === 'list');
+  document.body.classList.remove('detail-open');  // switching view closes the detail sheet
   // Leaflet needs a size recalculation once its container is shown again
   if (view === 'map' && map) {
     setTimeout(() => map.invalidateSize(), 0);
