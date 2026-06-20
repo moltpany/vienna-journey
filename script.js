@@ -32,11 +32,13 @@ let markers = {};         // id → Leaflet marker
 let timelineDots = {};    // id → DOM element
 let listCards = {};       // id → list card DOM element
 let map;
+let tileLayer;
 
 /* ── Bootstrap ── */
 async function init() {
   await loadData();
   initMap();
+  initTheme();
   initFilters();
   initSearch();
   initViewToggle();
@@ -70,7 +72,7 @@ function initMap() {
     attributionControl: true,
   });
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  tileLayer = L.tileLayer(tileUrl(currentTheme()), {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OSM</a> © <a href="https://carto.com/">CARTO</a>',
     maxZoom: 19,
   }).addTo(map);
@@ -175,6 +177,33 @@ function initSearch() {
   document.getElementById('search-box').addEventListener('input', () => {
     applyVisibility();
   });
+}
+
+/* ── THEME (dark / light) ── */
+const THEME_KEY = 'vienna-journey-theme';
+function currentTheme() {
+  return localStorage.getItem(THEME_KEY) === 'light' ? 'light' : 'dark';
+}
+function tileUrl(theme) {
+  return theme === 'light'
+    ? 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
+    : 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+}
+function applyTheme(theme) {
+  document.documentElement.classList.toggle('theme-light', theme === 'light');
+  const btn = document.getElementById('theme-toggle');
+  if (btn) btn.textContent = theme === 'light' ? '☀️' : '🌙';
+  if (tileLayer) tileLayer.setUrl(tileUrl(theme));
+  localStorage.setItem(THEME_KEY, theme);
+}
+function initTheme() {
+  const btn = document.getElementById('theme-toggle');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      applyTheme(currentTheme() === 'light' ? 'dark' : 'light');
+    });
+  }
+  applyTheme(currentTheme());
 }
 
 /* ── VIEW TOGGLE (map / list) ── */

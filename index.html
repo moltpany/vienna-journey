@@ -11,6 +11,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <link rel="stylesheet" href="styles.css" />
+  <script>try{if(localStorage.getItem('vienna-journey-theme')==='light')document.documentElement.classList.add('theme-light');}catch(e){}</script>
 </head>
 <body>
 
@@ -45,6 +46,8 @@
   </div>
 
   <input id="search-box" type="search" placeholder="搜索作品或人物…" />
+
+  <button id="theme-toggle" type="button" title="切换深色 / 浅色" aria-label="切换深色 / 浅色">🌙</button>
 </header>
 
 <!-- ── MAIN LAYOUT ────────────────────────────────── -->

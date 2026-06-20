@@ -525,3 +525,37 @@ body.view-list #list-container { display: flex; }
 @media (max-width: 768px) {
   #list-grid { grid-template-columns: 1fr; }
 }
+
+/* ── THEME TOGGLE ── */
+#theme-toggle {
+  flex-shrink: 0;
+  width: 30px;
+  height: 28px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+#theme-toggle:hover { border-color: var(--text-dim); }
+
+/* ── LIGHT THEME ── */
+html.theme-light {
+  --bg: #f4f1ec;
+  --surface: #ffffff;
+  --surface-2: #ece7df;
+  --border: #d9d3c8;
+  --text: #2b2722;
+  --text-muted: #6c6358;
+  --text-dim: #a39a8b;
+}
+html.theme-light .tl-milestone { background: rgba(0,0,0,0.12); }
+html.theme-light .tl-ms-tick { background: rgba(0,0,0,0.3); }
+html.theme-light .tl-entry-dot.selected { box-shadow: 0 0 0 3px rgba(0,0,0,0.15); }
+html.theme-light .detail-link.journey-link { background: rgba(0,0,0,0.03); border-color: rgba(0,0,0,0.12); }
+html.theme-light .detail-link.journey-link:hover { border-color: rgba(0,0,0,0.28); }
+html.theme-light .leaflet-popup-content-wrapper { box-shadow: 0 4px 20px rgba(0,0,0,0.25); }
+html.theme-light .leaflet-control-attribution { background: rgba(255,255,255,0.8) !important; }
