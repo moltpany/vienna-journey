@@ -223,6 +223,11 @@
   },
   {
     "id": "klimt-beethoven-frieze-1902",
+    "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beethovenfries.jpg?width=680",
+      "credit": "Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Beethovenfries.jpg"
+    },
     "year": 1902,
     "city": "Vienna",
     "country": "Austria",
@@ -256,6 +261,11 @@
   },
   {
     "id": "klimt-der-kuss-1908",
+    "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Kiss%20-%20Gustav%20Klimt%20-%20Google%20Cultural%20Institute.jpg?width=680",
+      "credit": "Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:The%20Kiss%20-%20Gustav%20Klimt%20-%20Google%20Cultural%20Institute.jpg"
+    },
     "year": 1908,
     "city": "Vienna",
     "country": "Austria",
@@ -290,6 +300,11 @@
   },
   {
     "id": "schiele-tod-und-maedchen-1915",
+    "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Egon%20Schiele%20-%20Tod%20und%20M%C3%A4dchen%20-%203171%20-%20%C3%96sterreichische%20Galerie%20Belvedere.jpg?width=680",
+      "credit": "Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Egon%20Schiele%20-%20Tod%20und%20M%C3%A4dchen%20-%203171%20-%20%C3%96sterreichische%20Galerie%20Belvedere.jpg"
+    },
     "year": 1915,
     "city": "Vienna",
     "country": "Austria",
@@ -358,6 +373,11 @@
   },
   {
     "id": "secession-building-1898",
+    "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wiener%20Secessionsgeb%C3%A4ude.jpg?width=680",
+      "credit": "Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Wiener%20Secessionsgeb%C3%A4ude.jpg"
+    },
     "year": 1898,
     "city": "Vienna",
     "country": "Austria",
@@ -391,6 +411,11 @@
   },
   {
     "id": "otto-wagner-karlsplatz-1899",
+    "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karlsplatz%20Stadtbahn%20Station%20von%20Otto%20Wagner%201.JPG?width=680",
+      "credit": "Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Karlsplatz%20Stadtbahn%20Station%20von%20Otto%20Wagner%201.JPG"
+    },
     "year": 1899,
     "city": "Vienna",
     "country": "Austria",
@@ -424,6 +449,11 @@
   },
   {
     "id": "loos-haus-1911",
+    "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Looshaus%20Michaelerplatz.JPG?width=680",
+      "credit": "Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Looshaus%20Michaelerplatz.JPG"
+    },
     "year": 1911,
     "city": "Vienna",
     "country": "Austria",
@@ -728,6 +758,12 @@
   },
   {
     "id": "makart-festzug-1879",
+    "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hans%20Makart%20-%20Die%20Falknerin%201880.JPG?width=680",
+      "caption": "汉斯·马卡特《猎鹰女》(1880)——马卡特华丽风格的代表作",
+      "credit": "Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Hans%20Makart%20-%20Die%20Falknerin%201880.JPG"
+    },
     "year": 1879,
     "city": "Vienna",
     "country": "Austria",
@@ -800,6 +836,11 @@
   },
   {
     "id": "klimt-adele-bloch-bauer-1907",
+    "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gustav%20Klimt%2C%201907%2C%20Adele%20Bloch-Bauer%20I%2C%20Neue%20Galerie%20New%20York.jpg?width=680",
+      "credit": "Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Gustav%20Klimt%2C%201907%2C%20Adele%20Bloch-Bauer%20I%2C%20Neue%20Galerie%20New%20York.jpg"
+    },
     "year": 1907,
     "city": "Vienna",
     "country": "Austria",
@@ -836,6 +877,11 @@
   },
   {
     "id": "schiele-die-familie-1918",
+    "image": {
+      "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Egon%20Schiele%20-%20Die%20Familie%20%281918%29.jpg?width=680",
+      "credit": "Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Egon%20Schiele%20-%20Die%20Familie%20%281918%29.jpg"
+    },
     "year": 1918,
     "city": "Vienna",
     "country": "Austria",

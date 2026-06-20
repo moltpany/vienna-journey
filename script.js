@@ -378,6 +378,20 @@ function showDetail(entry) {
   document.getElementById('detail-meta').textContent   =
     [entry.year, entry.city, entry.country].filter(Boolean).join(' · ');
 
+  // Image
+  const imgEl = document.getElementById('detail-image');
+  if (entry.image && entry.image.url) {
+    const cap = entry.image.caption ? entry.image.caption + ' · ' : '';
+    imgEl.style.display = '';
+    imgEl.innerHTML = `
+      <img src="${entry.image.url}" alt="${(entry.work || '').replace(/"/g, '&quot;')}" loading="lazy" />
+      <figcaption>${cap}<a href="${entry.image.page}" target="_blank" rel="noopener noreferrer">${entry.image.credit || '来源'}</a></figcaption>
+    `;
+  } else {
+    imgEl.style.display = 'none';
+    imgEl.innerHTML = '';
+  }
+
   // Body
   document.getElementById('detail-context').textContent = entry.context || '';
   document.getElementById('detail-meaning').textContent = entry.meaning || '';
