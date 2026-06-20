@@ -715,5 +715,149 @@
       }
     },
     "collections": ["fin-de-siecle"]
+  },
+  {
+    "id": "makart-festzug-1879",
+    "year": 1879,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2085,
+    "lng": 16.359,
+    "work": "马卡特庆典游行（Makart-Festzug）",
+    "catalogue": "庆典设计",
+    "genre": "历史主义 / 庆典装置",
+    "category": "visual-art",
+    "person": "汉斯·马卡特",
+    "context": "1879年4月，被称作「画家王子」的汉斯·马卡特为皇帝弗朗茨·约瑟夫一世与皇后伊丽莎白的银婚大典，设计了一场盛大的历史主义游行：上万名身着文艺复兴服装的市民、行会与艺术家，沿刚刚落成的环城大道列队行进，由马卡特骑马领头。",
+    "meaning": "这是环城大道时代历史主义美学与市民阶层自我展示的顶点。「马卡特风格」（Makartstil）一度主宰维也纳的室内、绘画与时尚趣味；也正是对这种繁缛装饰的反叛，二十年后催生了分离派与维也纳现代主义。",
+    "source": {
+      "label": "Wikipedia: Hans Makart",
+      "url": "https://en.wikipedia.org/wiki/Hans_Makart",
+      "summary": "1879年4月，为弗朗茨·约瑟夫一世与伊丽莎白银婚庆典设计的历史主义游行，沿维也纳环城大道举行。"
+    },
+    "place": {
+      "name": "环城大道（Ringstrasse）",
+      "address": "Ringstraße, 1010 Wien",
+      "kind": "城市大道",
+      "certainty": "确定",
+      "note": "1879年庆典游行的行进路线；马卡特的传奇画室位于第四区古斯豪斯街。",
+      "lat": 48.2085,
+      "lng": 16.359,
+      "source": {
+        "label": "Wien Geschichte Wiki",
+        "url": "https://www.geschichtewiki.wien.gv.at"
+      }
+    },
+    "collections": [
+      "biedermeier-romantic"
+    ]
+  },
+  {
+    "id": "wiener-werkstaette-1903",
+    "year": 1903,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2052,
+    "lng": 16.347,
+    "work": "维也纳工坊（Wiener Werkstätte）成立",
+    "catalogue": "应用艺术",
+    "genre": "设计工坊 / 应用艺术",
+    "category": "visual-art",
+    "person": "约瑟夫·霍夫曼 & 科罗曼·莫泽",
+    "context": "1903年，建筑师约瑟夫·霍夫曼与画家科罗曼·莫泽，在银行家弗里茨·韦恩多费尔的资助下于维也纳第七区创办「维也纳工坊」。它脱胎自分离派理想，主张「总体艺术品」（Gesamtkunstwerk）：从建筑、家具、餐具到首饰与服装，都按统一的现代美学手工打造。",
+    "meaning": "维也纳工坊把分离派的纯艺术革命推向日常生活，用几何化、克制而精致的语言深刻影响了20世纪现代设计与包豪斯。它代表世纪末维也纳「美应当渗透每一件器物」的雄心，也因高昂成本于1932年结业。",
+    "source": {
+      "label": "Wikipedia: Wiener Werkstätte",
+      "url": "https://en.wikipedia.org/wiki/Wiener_Werkst%C3%A4tte",
+      "summary": "1903年由霍夫曼与莫泽创办于维也纳第七区诺伊斯蒂夫特巷，1932年结业；设计档案今藏于应用艺术博物馆（MAK）。"
+    },
+    "place": {
+      "name": "维也纳工坊旧址（诺伊斯蒂夫特巷）",
+      "address": "Neustiftgasse 32–34, 1070 Wien",
+      "kind": "工坊",
+      "certainty": "确定",
+      "note": "成立时的工坊地址；其设计档案今藏于应用艺术博物馆（MAK）。",
+      "lat": 48.2052,
+      "lng": 16.347,
+      "source": {
+        "label": "MAK – Museum für angewandte Kunst",
+        "url": "https://www.mak.at"
+      }
+    },
+    "collections": [
+      "fin-de-siecle"
+    ]
+  },
+  {
+    "id": "klimt-adele-bloch-bauer-1907",
+    "year": 1907,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.1926,
+    "lng": 16.3792,
+    "work": "《阿黛尔·布洛赫-鲍尔肖像 I》（金衣女人）",
+    "catalogue": "绘画",
+    "genre": "油画、银箔与金箔，约140 × 140 cm",
+    "category": "visual-art",
+    "person": "古斯塔夫·克林姆特",
+    "context": "1903至1907年间，克林姆特为维也纳实业家斐迪南·布洛赫-鲍尔绘制其妻阿黛尔的肖像。画中人沉入一片由金箔与银箔铺成的璀璨平面，唯有脸庞、双肩与交握的手浮于其上——这是克林姆特「黄金时期」用力最深的一幅，前后耗时四年、留下逾百张习作。",
+    "meaning": "它是世纪末维也纳上层犹太资产阶级与先锋艺术联姻的缩影。1938年纳粹吞并奥地利后画作遭掠夺，长期悬于贝尔维德宫、被称作「奥地利的蒙娜丽莎」；2006年经历著名的归还诉讼（电影《金衣女人》原型），归还阿黛尔的继承人玛丽亚·阿尔特曼，现藏纽约新美术馆。",
+    "source": {
+      "label": "Wikipedia: Portrait of Adele Bloch-Bauer I",
+      "url": "https://en.wikipedia.org/wiki/Portrait_of_Adele_Bloch-Bauer_I",
+      "summary": "约1903–1907年完成，油画与金银箔，约140×140 cm；1941–2006年藏于贝尔维德宫，2006年归还后现藏纽约新美术馆。"
+    },
+    "place": {
+      "name": "维也纳贝尔维德宫（上宫）",
+      "address": "Prinz-Eugen-Straße 27, 1030 Wien",
+      "kind": "美术馆",
+      "certainty": "确定",
+      "note": "创作于克林姆特的维也纳画室；1941–2006年长期陈列于此，2006年归还后移藏纽约新美术馆。",
+      "lat": 48.1917,
+      "lng": 16.3803,
+      "source": {
+        "label": "Belvedere Museum",
+        "url": "https://www.belvedere.at"
+      }
+    },
+    "collections": [
+      "fin-de-siecle"
+    ]
+  },
+  {
+    "id": "schiele-die-familie-1918",
+    "year": 1918,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.1909,
+    "lng": 16.3814,
+    "work": "《家庭》",
+    "catalogue": "绘画",
+    "genre": "油画，约150 × 160 cm",
+    "category": "visual-art",
+    "person": "埃贡·席勒",
+    "context": "1918年，席勒在维也纳分离派第49届展览上大获成功，一跃成为克林姆特之后维也纳画坛的领军者。同年他画下《家庭》：画家本人蹲于身后，前面是裸身的女人与一个孩子。然而画中的孩子从未出生——这年秋天，西班牙流感先夺走怀孕六个月的妻子伊迪丝，三天后席勒也病逝，年仅28岁。",
+    "meaning": "《家庭》成了一幅关于「未能成形的家庭」的遗作，也为维也纳的黄金一代画上句点：1918这一年，克林姆特、奥托·瓦格纳、科罗曼·莫泽与席勒相继离世，世纪末维也纳的创造力随帝国一同崩解。",
+    "source": {
+      "label": "Belvedere Museum: Die Familie",
+      "url": "https://www.belvedere.at",
+      "summary": "1918年作（未完成），油画，约150×160 cm，现藏于维也纳上贝尔维德宫。"
+    },
+    "place": {
+      "name": "维也纳贝尔维德宫（上宫）",
+      "address": "Prinz-Eugen-Straße 27, 1030 Wien",
+      "kind": "美术馆",
+      "certainty": "确定",
+      "note": "现藏于此；1918年席勒的分离派个展在维也纳分离派展览馆举行。",
+      "lat": 48.1917,
+      "lng": 16.3803,
+      "source": {
+        "label": "Belvedere Museum",
+        "url": "https://www.belvedere.at"
+      }
+    },
+    "collections": [
+      "fin-de-siecle"
+    ]
   }
 ]
