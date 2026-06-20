@@ -30,6 +30,7 @@ let activeCategories = new Set(Object.keys(CAT_COLORS));
 let selectedId = null;
 let markers = {};         // id → Leaflet marker
 let timelineDots = {};    // id → DOM element
+let listCards = {};       // id → list card DOM element
 let map;
 
 /* ── Bootstrap ── */
@@ -38,8 +39,11 @@ async function init() {
   initMap();
   initFilters();
   initSearch();
+  initViewToggle();
   renderMarkers();
   renderTimeline();
+  renderList();
+  applyVisibility();
 }
 
 async function loadData() {
@@ -113,13 +117,16 @@ function renderMarkers() {
 
 function applyVisibility() {
   const q = document.getElementById('search-box').value.toLowerCase().trim();
+  let visibleCount = 0;
 
   entries.forEach(entry => {
     const marker   = markers[entry.id];
     const dot      = timelineDots[entry.id];
+    const card     = listCards[entry.id];
     const catOk    = activeCategories.has(entry.category);
     const searchOk = !q || matchSearch(entry, q);
     const visible  = catOk && searchOk;
+    if (visible) visibleCount++;
 
     if (marker) {
       if (visible) marker.addTo(map);
@@ -130,7 +137,14 @@ function applyVisibility() {
       dot.classList.toggle('dimmed', !visible);
       dot.style.pointerEvents = visible ? '' : 'none';
     }
+
+    if (card) {
+      card.classList.toggle('hidden', !visible);
+    }
   });
+
+  const countEl = document.getElementById('list-count');
+  if (countEl) countEl.textContent = `显示 ${visibleCount} / ${entries.length} 件作品`;
 }
 
 function matchSearch(entry, q) {
@@ -160,6 +174,48 @@ function initFilters() {
 function initSearch() {
   document.getElementById('search-box').addEventListener('input', () => {
     applyVisibility();
+  });
+}
+
+/* ── VIEW TOGGLE (map / list) ── */
+function initViewToggle() {
+  document.querySelectorAll('.view-btn').forEach(btn => {
+    btn.addEventListener('click', () => setView(btn.dataset.view));
+  });
+}
+
+function setView(view) {
+  document.querySelectorAll('.view-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.view === view);
+  });
+  document.body.classList.toggle('view-list', view === 'list');
+  // Leaflet needs a size recalculation once its container is shown again
+  if (view === 'map' && map) {
+    setTimeout(() => map.invalidateSize(), 0);
+  }
+}
+
+/* ── LIST VIEW ── */
+function renderList() {
+  const grid = document.getElementById('list-grid');
+  grid.innerHTML = '';
+  listCards = {};
+
+  [...entries].sort((a, b) => a.year - b.year).forEach(entry => {
+    const color = CAT_COLORS[entry.category] || '#aaa';
+    const card = document.createElement('div');
+    card.className = 'list-card';
+    card.dataset.id = entry.id;
+    card.style.setProperty('--cat-color', color);
+    card.innerHTML = `
+      <div class="list-card-cat">${CAT_LABELS[entry.category] || entry.category}</div>
+      <div class="list-card-work">${entry.work}</div>
+      <div class="list-card-person">${entry.person || ''}</div>
+      <div class="list-card-meta">${entry.year} · ${entry.city}</div>
+    `;
+    card.addEventListener('click', () => selectEntry(entry.id));
+    grid.appendChild(card);
+    listCards[entry.id] = card;
   });
 }
 
@@ -245,9 +301,12 @@ function selectEntry(id) {
   if (selectedId === id) return;
   selectedId = id;
 
-  // Update timeline dots
+  // Update timeline dots + list cards
   Object.entries(timelineDots).forEach(([eid, dot]) => {
     dot.classList.toggle('selected', eid === id);
+  });
+  Object.entries(listCards).forEach(([eid, card]) => {
+    card.classList.toggle('selected', eid === id);
   });
 
   // Pan map to marker
@@ -265,6 +324,7 @@ function selectEntry(id) {
 function deselect() {
   selectedId = null;
   Object.values(timelineDots).forEach(d => d.classList.remove('selected'));
+  Object.values(listCards).forEach(c => c.classList.remove('selected'));
   map.closePopup();
   document.getElementById('detail-empty').style.display = '';
   document.getElementById('detail-content').classList.remove('visible');
@@ -316,11 +376,17 @@ function showDetail(entry) {
     entry.links.forEach(lnk => allLinks.push({ ...lnk, isJourney: true }));
   }
   if (entry.listening) {
-    if (entry.listening.youtubeSearch) {
-      allLinks.push({ label: '在 YouTube 搜索', url: entry.listening.youtubeSearch });
+    if (entry.listening.appleMusicSearch) {
+      allLinks.push({ label: '在 Apple Music 搜索', url: entry.listening.appleMusicSearch });
     }
     if (entry.listening.spotifySearch) {
       allLinks.push({ label: '在 Spotify 搜索', url: entry.listening.spotifySearch });
+    }
+    if (entry.listening.youtubeSearch) {
+      allLinks.push({ label: '在 YouTube 搜索', url: entry.listening.youtubeSearch });
+    }
+    if (entry.listening.bilibiliSearch) {
+      allLinks.push({ label: '在 Bilibili 搜索', url: entry.listening.bilibiliSearch });
     }
   }
   if (entry.source && entry.source.url) {

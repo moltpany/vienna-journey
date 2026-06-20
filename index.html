@@ -18,6 +18,11 @@
 <header id="header">
   <div id="site-title">Vienna Journey<span>维也纳文化地图</span></div>
 
+  <div id="view-toggle">
+    <button class="view-btn active" data-view="map" type="button">🗺 地图</button>
+    <button class="view-btn" data-view="list" type="button">☰ 列表</button>
+  </div>
+
   <div id="category-filters">
     <button class="cat-btn active" data-cat="music">
       <span class="dot"></span>音乐
@@ -50,11 +55,17 @@
     <div id="map"></div>
   </div>
 
+  <!-- LIST -->
+  <div id="list-container">
+    <div id="list-meta"><span id="list-count"></span></div>
+    <div id="list-grid"><!-- populated by JS --></div>
+  </div>
+
   <!-- DETAIL PANEL -->
   <aside id="detail-panel">
     <div id="detail-empty">
       <div class="empty-icon">🗺</div>
-      <p>点击地图上的标记<br>或时间轴上的节点<br>探索维也纳的文化版图</p>
+      <p>点击地图标记、作品列表<br>或时间轴上的节点<br>探索维也纳的文化版图</p>
     </div>
 
     <div id="detail-content">

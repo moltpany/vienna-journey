@@ -42,7 +42,9 @@
       "target": "Le nozze di Figaro, K. 492",
       "note": "推荐序曲与第二幕终曲，感受莫扎特如何将阶级矛盾化为音乐精华。",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mozart+Marriage+of+Figaro+K492",
-      "spotifySearch": "https://open.spotify.com/search/Mozart%20Marriage%20of%20Figaro"
+      "spotifySearch": "https://open.spotify.com/search/Mozart%20Marriage%20of%20Figaro",
+      "appleMusicSearch": "https://music.apple.com/search?term=Mozart%20Le%20nozze%20di%20Figaro",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=%E8%8E%AB%E6%89%8E%E7%89%B9%20%E8%B4%B9%E5%8A%A0%E7%BD%97%E7%9A%84%E5%A9%9A%E7%A4%BC"
     }
   },
   {
@@ -88,7 +90,9 @@
       "target": "Symphony No. 3 in E♭ major, Op. 55 \"Eroica\"",
       "note": "推荐第一乐章与第二乐章「葬礼进行曲」，感受贝多芬对英雄与死亡的极致诠释。",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Beethoven+Symphony+3+Eroica",
-      "spotifySearch": "https://open.spotify.com/search/Beethoven%20Symphony%203%20Eroica"
+      "spotifySearch": "https://open.spotify.com/search/Beethoven%20Symphony%203%20Eroica",
+      "appleMusicSearch": "https://music.apple.com/search?term=Beethoven%20Symphony%20No.%203%20Eroica",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=%E8%B4%9D%E5%A4%9A%E8%8A%AC%20%E8%8B%B1%E9%9B%84%E4%BA%A4%E5%93%8D%E6%9B%B2"
     }
   },
   {
@@ -128,7 +132,9 @@
       "target": "Winterreise, D. 911",
       "note": "推荐第一曲《晚安》与第二十四曲《摇琴人》，感受旅途开始与终结的宿命循环。",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Schubert+Winterreise+D911",
-      "spotifySearch": "https://open.spotify.com/search/Schubert%20Winterreise"
+      "spotifySearch": "https://open.spotify.com/search/Schubert%20Winterreise",
+      "appleMusicSearch": "https://music.apple.com/search?term=Schubert%20Winterreise",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=%E8%88%92%E4%BC%AF%E7%89%B9%20%E5%86%AC%E4%B9%8B%E6%97%85"
     }
   },
   {
@@ -168,7 +174,9 @@
       "target": "An der schönen blauen Donau, Op. 314",
       "note": "推荐卡拉扬指挥的维也纳爱乐版本，感受这首圆舞曲对帝都优雅的完美诠释。",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Strauss+Blue+Danube+Op314",
-      "spotifySearch": "https://open.spotify.com/search/Strauss%20Blue%20Danube"
+      "spotifySearch": "https://open.spotify.com/search/Strauss%20Blue%20Danube",
+      "appleMusicSearch": "https://music.apple.com/search?term=Johann%20Strauss%20Blue%20Danube",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=%E7%BA%A6%E7%BF%B0%C2%B7%E6%96%BD%E7%89%B9%E5%8A%B3%E6%96%AF%20%E8%93%9D%E8%89%B2%E5%A4%9A%E7%91%99%E6%B2%B3"
     }
   },
   {
@@ -208,7 +216,9 @@
       "target": "Das Lied von der Erde (Der Abschied)",
       "note": "最后一曲《告别》，建议深夜独听，感受那句「永远……永远」如何将生命化为回声。",
       "youtubeSearch": "https://www.youtube.com/results?search_query=Mahler+Das+Lied+von+der+Erde+Abschied",
-      "spotifySearch": "https://open.spotify.com/search/Mahler%20Das%20Lied%20von%20der%20Erde"
+      "spotifySearch": "https://open.spotify.com/search/Mahler%20Das%20Lied%20von%20der%20Erde",
+      "appleMusicSearch": "https://music.apple.com/search?term=Mahler%20Das%20Lied%20von%20der%20Erde",
+      "bilibiliSearch": "https://search.bilibili.com/all?keyword=%E9%A9%AC%E5%8B%92%20%E5%A4%A7%E5%9C%B0%E4%B9%8B%E6%AD%8C"
     }
   },
   {
