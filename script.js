@@ -59,11 +59,14 @@ async function init() {
   initSearch();
   initViewToggle();
   initLang();
+  initDetailBack();
   applyUIStrings();
   renderMarkers();
   renderTimeline();
   renderList();
   applyVisibility();
+  fitLayout();
+  window.addEventListener('resize', fitLayout);
 }
 
 async function loadData() {
@@ -257,6 +260,7 @@ const UI = {
     'listen-apple': '在 Apple Music 搜索', 'listen-spotify': '在 Spotify 搜索',
     'listen-youtube': '在 YouTube 搜索', 'listen-bilibili': '在 Bilibili 搜索',
     'source-fallback': '来源',
+    'back-to-map': '🗺 在地图上查看',
     'count': (n, t) => `显示 ${n} / ${t} 件作品`,
   },
   en: {
@@ -272,6 +276,7 @@ const UI = {
     'listen-apple': 'Search on Apple Music', 'listen-spotify': 'Search on Spotify',
     'listen-youtube': 'Search on YouTube', 'listen-bilibili': 'Search on Bilibili',
     'source-fallback': 'Source',
+    'back-to-map': '🗺 View on map',
     'count': (n, t) => `Showing ${n} / ${t} works`,
   },
 };
@@ -324,6 +329,7 @@ function initLang() {
 function setLang(l) {
   lang = l;
   localStorage.setItem(LANG_KEY, l);
+  const wasDetailOpen = document.body.classList.contains('detail-open');
   applyUIStrings();
   renderMarkers();
   renderTimeline();
@@ -332,10 +338,12 @@ function setLang(l) {
   if (selectedId) {
     const e = entries.find(x => x.id === selectedId);
     if (e) showDetail(tr(e));
+    if (!wasDetailOpen) document.body.classList.remove('detail-open');
     const card = listCards[selectedId]; if (card) card.classList.add('selected');
     const dot  = timelineDots[selectedId]; if (dot) dot.classList.add('selected');
     const mk   = markers[selectedId]; if (mk) mk.openPopup();
   }
+  fitLayout();
 }
 
 /* ── VIEW TOGGLE (map / list) ── */
@@ -354,6 +362,30 @@ function setView(view) {
   if (view === 'map' && map) {
     setTimeout(() => map.invalidateSize(), 0);
   }
+}
+
+/* ── DETAIL: back-to-map + responsive layout fit ── */
+function initDetailBack() {
+  const btn = document.getElementById('detail-back');
+  if (btn) btn.addEventListener('click', goToMap);
+}
+
+function goToMap() {
+  document.body.classList.remove('detail-open');
+  setView('map');
+  const entry = entries.find(e => e.id === selectedId);
+  if (entry && map) {
+    map.setView([entry.lat, entry.lng], Math.max(map.getZoom(), 15), { animate: true });
+    if (markers[selectedId]) markers[selectedId].openPopup();
+  }
+}
+
+// Keep the map/list area exactly below the header, whatever height it wraps to
+function fitLayout() {
+  const header = document.getElementById('header');
+  const layout = document.getElementById('layout');
+  if (header && layout) layout.style.top = header.offsetHeight + 'px';
+  if (map) map.invalidateSize();
 }
 
 /* ── LIST VIEW ── */
@@ -465,7 +497,6 @@ function hideMilestoneTooltip() {
 
 /* ── SELECTION ── */
 function selectEntry(id) {
-  if (selectedId === id) return;
   selectedId = id;
 
   // Update timeline dots + list cards
@@ -490,6 +521,7 @@ function selectEntry(id) {
 
 function deselect() {
   selectedId = null;
+  document.body.classList.remove('detail-open');
   Object.values(timelineDots).forEach(d => d.classList.remove('selected'));
   Object.values(listCards).forEach(c => c.classList.remove('selected'));
   map.closePopup();
@@ -501,6 +533,7 @@ function deselect() {
 function showDetail(entry) {
   document.getElementById('detail-empty').style.display = 'none';
   document.getElementById('detail-content').classList.add('visible');
+  document.body.classList.add('detail-open');
 
   const color = CAT_COLORS[entry.category] || '#aaa';
   const catLabelText = catLabel(entry.category);
