@@ -157,6 +157,17 @@ html, body {
   flex-shrink: 0;
 }
 
+/* Desktop: when a work is open, grow the detail toward ~half the screen so the
+   map no longer dominates; it shrinks back when nothing is selected. */
+@media (min-width: 769px) {
+  body.detail-open #detail-panel {
+    width: auto;
+    flex: 1 1 0;
+    min-width: 440px;
+    max-width: 820px;
+  }
+}
+
 #detail-empty {
   flex: 1;
   display: flex;

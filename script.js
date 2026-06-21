@@ -67,6 +67,11 @@ async function init() {
   applyVisibility();
   fitLayout();
   window.addEventListener('resize', fitLayout);
+  // keep Leaflet correctly sized as the detail panel grows/shrinks the map area
+  const mapBox = document.getElementById('map-container');
+  if (window.ResizeObserver && mapBox) {
+    new ResizeObserver(() => { if (map) map.invalidateSize(); }).observe(mapBox);
+  }
 }
 
 async function loadData() {
