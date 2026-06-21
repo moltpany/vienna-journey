@@ -52,6 +52,7 @@ let tileLayer;
 let lang = (localStorage.getItem('vienna-journey-lang') === 'en') ? 'en' : 'zh';
 let enEntries = {};       // id → English overlay
 let enMilestones = {};    // id → English overlay
+let tlMode = 'works';     // bottom timeline mode: 'works' | 'people'
 
 /* ── Bootstrap ── */
 async function init() {
@@ -62,6 +63,7 @@ async function init() {
   initSearch();
   initViewToggle();
   initLang();
+  initTimelineToggle();
   initDetailBack();
   applyUIStrings();
   renderMarkers();
@@ -272,6 +274,7 @@ const UI = {
     'search-ph': '搜索作品或人物…',
     'theme-title': '切换深色 / 浅色',
     'lang-btn': 'EN',
+    'tl-works': '作品', 'tl-people': '人物',
     'empty': '点击地图标记、作品列表<br>或时间轴上的节点<br>探索维也纳的文化版图',
     'lbl-context': '背景', 'lbl-meaning': '意义', 'lbl-place': '地点', 'lbl-links': '延伸阅读', 'lbl-source': '来源',
     'listen-apple': '在 Apple Music 搜索', 'listen-spotify': '在 Spotify 搜索',
@@ -288,6 +291,7 @@ const UI = {
     'search-ph': 'Search works or people…',
     'theme-title': 'Toggle dark / light',
     'lang-btn': '中',
+    'tl-works': 'Works', 'tl-people': 'People',
     'empty': "Click a map marker, a work in the list,<br>or a node on the timeline<br>to explore Vienna's cultural map",
     'lbl-context': 'Context', 'lbl-meaning': 'Significance', 'lbl-place': 'Place', 'lbl-links': 'Links', 'lbl-source': 'Source',
     'listen-apple': 'Search on Apple Music', 'listen-spotify': 'Search on Spotify',
@@ -439,9 +443,11 @@ function renderList() {
 function renderTimeline() {
   const inner = document.getElementById('timeline-inner');
 
-  // clear previous render (keep the axis) so this can re-run on language switch
-  inner.querySelectorAll('.tl-year-label, .tl-milestone, .tl-entry-dot').forEach(el => el.remove());
+  // clear previous render (keep the axis) so this can re-run on language / mode switch
+  inner.querySelectorAll('.tl-year-label, .tl-milestone, .tl-entry-dot, .tl-life-band').forEach(el => el.remove());
   timelineDots = {};
+
+  if (tlMode === 'people') { renderPeopleTimeline(inner); return; }
 
   // Year labels
   const labelYears = [1786, 1800, 1815, 1830, 1848, 1867, 1900, 1914, 1921, 1938];
@@ -495,6 +501,61 @@ function renderTimeline() {
 
 function pct(year) {
   return ((year - YEAR_MIN) / (YEAR_MAX - YEAR_MIN)) * 100;
+}
+
+/* ── PEOPLE TIMELINE (life bands — shows who overlapped) ── */
+function initTimelineToggle() {
+  document.querySelectorAll('.tl-mode-btn').forEach(btn => {
+    btn.addEventListener('click', () => setTlMode(btn.dataset.mode));
+  });
+}
+
+function setTlMode(mode) {
+  tlMode = mode;
+  document.querySelectorAll('.tl-mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
+  document.body.classList.toggle('tl-people', mode === 'people');
+  if (mode === 'people') {
+    const n = entries.filter(e => e.category === 'people' && e.birthYear).length;
+    document.documentElement.style.setProperty('--timeline-height', (24 + n * 13 + 12) + 'px');
+  } else {
+    document.documentElement.style.setProperty('--timeline-height', '72px');
+  }
+  renderTimeline();
+  fitLayout();
+}
+
+function renderPeopleTimeline(inner) {
+  const ppl = entries.filter(e => e.category === 'people' && e.birthYear)
+    .sort((a, b) => a.birthYear - b.birthYear);
+  if (!ppl.length) return;
+  const pmin = Math.min(...ppl.map(p => p.birthYear));
+  const pmax = Math.max(...ppl.map(p => p.deathYear));
+  const range = pmax - pmin || 1;
+  const pp = y => ((y - pmin) / range) * 100;
+
+  for (let y = Math.ceil(pmin / 20) * 20; y <= pmax; y += 20) {
+    const el = document.createElement('div');
+    el.className = 'tl-year-label';
+    el.textContent = y;
+    el.style.left = pp(y) + '%';
+    el.style.top = '6px';
+    inner.appendChild(el);
+  }
+
+  ppl.forEach((p, i) => {
+    const band = document.createElement('div');
+    band.className = 'tl-life-band';
+    band.style.left = pp(p.birthYear) + '%';
+    band.style.width = Math.max(pp(p.deathYear) - pp(p.birthYear), 0.5) + '%';
+    band.style.top = (24 + i * 13) + 'px';
+    band.title = tr(p).work + ' · ' + p.birthYear + '–' + p.deathYear;
+    const lbl = document.createElement('span');
+    lbl.className = 'tl-life-label';
+    lbl.textContent = tr(p).work;
+    band.appendChild(lbl);
+    band.addEventListener('click', e => { e.stopPropagation(); selectEntry(p.id); });
+    inner.appendChild(band);
+  });
 }
 
 /* ── MILESTONE TOOLTIP ── */

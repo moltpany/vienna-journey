@@ -432,6 +432,52 @@ html[lang="en"] #detail-context::first-letter {
 }
 .tl-milestone.active .tl-ms-label { opacity: 1; }
 
+/* timeline mode toggle (作品 / 人物) */
+#tl-mode-toggle {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  z-index: 10;
+  display: flex;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.tl-mode-btn {
+  background: var(--surface-2);
+  color: var(--text-muted);
+  border: none;
+  padding: 2px 9px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.tl-mode-btn + .tl-mode-btn { border-left: 1px solid var(--border); }
+.tl-mode-btn.active { background: var(--text-dim); color: var(--text); }
+body.tl-people #timeline-axis { display: none; }
+
+/* life bands (人物 mode) */
+.tl-life-band {
+  position: absolute;
+  height: 9px;
+  border-radius: 5px;
+  background: var(--people);
+  opacity: 0.9;
+  cursor: pointer;
+  transition: opacity 0.12s;
+}
+.tl-life-band:hover { opacity: 1; }
+.tl-life-label {
+  position: absolute;
+  left: 7px;
+  top: -3px;
+  font-size: 9px;
+  line-height: 15px;
+  white-space: nowrap;
+  color: var(--text);
+  text-shadow: 0 1px 2px var(--bg), 0 0 3px var(--bg);
+  pointer-events: none;
+}
+
 /* ── MAP MARKERS ── */
 .custom-marker {
   border-radius: 50%;
