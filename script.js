@@ -10,6 +10,7 @@ const CAT_COLORS = {
   'psychoanalysis': '#3498db',
   'literature':     '#2ecc71',
   'people':         '#c8a04a',
+  'politics':       '#c77dab',
 };
 
 const CAT_LABELS = {
@@ -65,6 +66,7 @@ async function init() {
   initLang();
   initTimelineToggle();
   initDetailBack();
+  initResizer();
   applyUIStrings();
   renderMarkers();
   renderTimeline();
@@ -139,8 +141,8 @@ function renderMarkers() {
 
   entries.forEach(entry => {
     const e = tr(entry);
-    const color = CAT_COLORS[entry.category] || '#aaa';
     const isPerson = entry.category === 'people';
+    const color = isPerson ? (CAT_COLORS[entry.domain] || CAT_COLORS['people']) : (CAT_COLORS[entry.category] || '#aaa');
     const icon = L.divIcon({
       className: '',
       html: isPerson
@@ -410,6 +412,35 @@ function fitLayout() {
   if (map) map.invalidateSize();
 }
 
+// Drag the divider to set the detail-panel width (desktop); remembered in localStorage
+function initResizer() {
+  const rz = document.getElementById('detail-resizer');
+  if (!rz) return;
+  const KEY = 'vienna-journey-detailw';
+  const saved = parseInt(localStorage.getItem(KEY), 10);
+  if (saved) document.documentElement.style.setProperty('--detail-w', saved + 'px');
+  let dragging = false, curW = saved || 0;
+  const move = ev => {
+    if (!dragging) return;
+    const x = ev.touches ? ev.touches[0].clientX : ev.clientX;
+    curW = Math.max(340, Math.min(window.innerWidth - x, window.innerWidth * 0.78));
+    document.documentElement.style.setProperty('--detail-w', curW + 'px');
+    if (map) map.invalidateSize();
+  };
+  const stop = () => {
+    if (!dragging) return;
+    dragging = false;
+    document.body.style.userSelect = '';
+    if (curW) localStorage.setItem(KEY, Math.round(curW));
+  };
+  rz.addEventListener('mousedown', e => { dragging = true; document.body.style.userSelect = 'none'; e.preventDefault(); });
+  rz.addEventListener('touchstart', () => { dragging = true; }, { passive: true });
+  window.addEventListener('mousemove', move);
+  window.addEventListener('touchmove', move, { passive: true });
+  window.addEventListener('mouseup', stop);
+  window.addEventListener('touchend', stop);
+}
+
 /* ── LIST VIEW ── */
 function renderList() {
   const grid = document.getElementById('list-grid');
@@ -548,6 +579,7 @@ function renderPeopleTimeline(inner) {
     band.style.left = pp(p.birthYear) + '%';
     band.style.width = Math.max(pp(p.deathYear) - pp(p.birthYear), 0.5) + '%';
     band.style.top = (24 + i * 13) + 'px';
+    band.style.background = CAT_COLORS[p.domain] || CAT_COLORS['people'];
     band.title = tr(p).work + ' · ' + p.birthYear + '–' + p.deathYear;
     const lbl = document.createElement('span');
     lbl.className = 'tl-life-label';

@@ -25,7 +25,8 @@
       "url": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart",
       "summary": "1756–1791，维也纳古典乐派代表。"
     },
-    "catalogue": "人物"
+    "catalogue": "人物",
+    "domain": "music"
   },
   {
     "id": "person-beethoven",
@@ -53,7 +54,8 @@
       "url": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven",
       "summary": "1770–1827，连接古典与浪漫的作曲家。"
     },
-    "catalogue": "人物"
+    "catalogue": "人物",
+    "domain": "music"
   },
   {
     "id": "person-schubert",
@@ -81,7 +83,8 @@
       "url": "https://en.wikipedia.org/wiki/Franz_Schubert",
       "summary": "1797–1828，艺术歌曲大师。"
     },
-    "catalogue": "人物"
+    "catalogue": "人物",
+    "domain": "music"
   },
   {
     "id": "person-strauss",
@@ -109,7 +112,8 @@
       "url": "https://en.wikipedia.org/wiki/Johann_Strauss_II",
       "summary": "1825–1899，圆舞曲之王。"
     },
-    "catalogue": "人物"
+    "catalogue": "人物",
+    "domain": "music"
   },
   {
     "id": "person-mahler",
@@ -137,7 +141,8 @@
       "url": "https://en.wikipedia.org/wiki/Gustav_Mahler",
       "summary": "1860–1911，作曲家与指挥家。"
     },
-    "catalogue": "人物"
+    "catalogue": "人物",
+    "domain": "music"
   },
   {
     "id": "person-klimt",
@@ -165,7 +170,8 @@
       "url": "https://en.wikipedia.org/wiki/Gustav_Klimt",
       "summary": "1862–1918，分离派领袖。"
     },
-    "catalogue": "人物"
+    "catalogue": "人物",
+    "domain": "visual-art"
   },
   {
     "id": "person-schiele",
@@ -193,7 +199,8 @@
       "url": "https://en.wikipedia.org/wiki/Egon_Schiele",
       "summary": "1890–1918，表现主义画家。"
     },
-    "catalogue": "人物"
+    "catalogue": "人物",
+    "domain": "visual-art"
   },
   {
     "id": "person-freud",
@@ -221,7 +228,8 @@
       "url": "https://en.wikipedia.org/wiki/Sigmund_Freud",
       "summary": "1856–1939，精神分析创始人。"
     },
-    "catalogue": "人物"
+    "catalogue": "人物",
+    "domain": "psychoanalysis"
   },
   {
     "id": "person-wittgenstein",
@@ -249,7 +257,8 @@
       "url": "https://en.wikipedia.org/wiki/Ludwig_Wittgenstein",
       "summary": "1889–1951，哲学家。"
     },
-    "catalogue": "人物"
+    "catalogue": "人物",
+    "domain": "philosophy"
   },
   {
     "id": "person-otto-wagner",
@@ -277,7 +286,8 @@
       "url": "https://en.wikipedia.org/wiki/Otto_Wagner",
       "summary": "1841–1918，维也纳现代建筑奠基人。"
     },
-    "catalogue": "人物"
+    "catalogue": "人物",
+    "domain": "architecture"
   },
   {
     "id": "person-sisi",
@@ -305,7 +315,8 @@
       "url": "https://en.wikipedia.org/wiki/Empress_Elisabeth_of_Austria",
       "summary": "1837–1898，奥匈帝国皇后。"
     },
-    "catalogue": "人物"
+    "catalogue": "人物",
+    "domain": "politics"
   },
   {
     "id": "person-franz-joseph",
@@ -333,6 +344,7 @@
       "url": "https://en.wikipedia.org/wiki/Franz_Joseph_I_of_Austria",
       "summary": "1830–1916，在位68年的奥匈皇帝。"
     },
-    "catalogue": "人物"
+    "catalogue": "人物",
+    "domain": "politics"
   }
 ]
