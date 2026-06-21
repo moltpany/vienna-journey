@@ -1,0 +1,338 @@
+[
+  {
+    "id": "person-mozart",
+    "category": "people",
+    "work": "莫扎特",
+    "person": "作曲家",
+    "genre": "作曲家 古典乐派",
+    "birthYear": 1756,
+    "deathYear": 1791,
+    "year": 1756,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2081,
+    "lng": 16.3744,
+    "match": "莫扎特",
+    "context": "1756年生于萨尔茨堡，1781年定居维也纳，在此度过创作巅峰的十年——写下《费加罗的婚礼》《唐璜》《魔笛》与大量协奏曲。1791年在贫病交加中骤逝，年仅35岁，葬于无名公墓。",
+    "meaning": "莫扎特把维也纳确立为18世纪欧洲的歌剧与古典音乐之都，是维也纳古典乐派承前启后的核心人物。",
+    "place": {
+      "name": "莫扎特故居（Mozarthaus）",
+      "address": "Domgasse 5, 1010 Wien",
+      "note": "1784–1787年在此居住，《费加罗的婚礼》在此写成，今为纪念馆。"
+    },
+    "source": {
+      "label": "Wikipedia: Wolfgang Amadeus Mozart",
+      "url": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart",
+      "summary": "1756–1791，维也纳古典乐派代表。"
+    },
+    "catalogue": "人物"
+  },
+  {
+    "id": "person-beethoven",
+    "category": "people",
+    "work": "贝多芬",
+    "person": "作曲家",
+    "genre": "作曲家",
+    "birthYear": 1770,
+    "deathYear": 1827,
+    "year": 1770,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2113,
+    "lng": 16.3647,
+    "match": "贝多芬",
+    "context": "1770年生于波恩，1792年移居维也纳师从海顿，此后再未离开。他在维也纳逐渐失聪，却写下九部交响曲、晚期弦乐四重奏与《庄严弥撒》，1827年葬礼有上万人送行。",
+    "meaning": "贝多芬把交响曲推向前所未有的规模与精神高度，是古典与浪漫之间的分水岭。",
+    "place": {
+      "name": "帕斯夸拉蒂楼（贝多芬故居之一）",
+      "address": "Mölker Bastei 8, 1010 Wien",
+      "note": "贝多芬曾多次在此居住，今为纪念馆。"
+    },
+    "source": {
+      "label": "Wikipedia: Ludwig van Beethoven",
+      "url": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven",
+      "summary": "1770–1827，连接古典与浪漫的作曲家。"
+    },
+    "catalogue": "人物"
+  },
+  {
+    "id": "person-schubert",
+    "category": "people",
+    "work": "舒伯特",
+    "person": "作曲家",
+    "genre": "作曲家 艺术歌曲",
+    "birthYear": 1797,
+    "deathYear": 1828,
+    "year": 1797,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2238,
+    "lng": 16.3566,
+    "match": "舒伯特",
+    "context": "1797年生于维也纳，一生几乎未离开这座城市。短短31年里写下600多首艺术歌曲、九部交响曲与大量室内乐，1828年英年早逝，按其遗愿葬在贝多芬墓旁。",
+    "meaning": "舒伯特把德语艺术歌曲（Lied）提升为独立的艺术形式，是浪漫主义抒情精神的化身。",
+    "place": {
+      "name": "舒伯特出生地",
+      "address": "Nussdorfer Straße 54, 1090 Wien",
+      "note": "舒伯特在此出生，今为纪念馆。"
+    },
+    "source": {
+      "label": "Wikipedia: Franz Schubert",
+      "url": "https://en.wikipedia.org/wiki/Franz_Schubert",
+      "summary": "1797–1828，艺术歌曲大师。"
+    },
+    "catalogue": "人物"
+  },
+  {
+    "id": "person-strauss",
+    "category": "people",
+    "work": "小约翰·施特劳斯",
+    "person": "作曲家 · 圆舞曲之王",
+    "genre": "作曲家 圆舞曲",
+    "birthYear": 1825,
+    "deathYear": 1899,
+    "year": 1825,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2166,
+    "lng": 16.3848,
+    "match": "施特劳斯",
+    "context": "1825年生于维也纳，违背身为乐长的父亲意愿走上音乐道路。他以《蓝色多瑙河》《维也纳森林的故事》等圆舞曲风靡欧洲，被誉为「圆舞曲之王」。",
+    "meaning": "他把维也纳圆舞曲推向艺术顶峰，使其成为哈布斯堡帝国黄金时代优雅的代名词。",
+    "place": {
+      "name": "施特劳斯故居",
+      "address": "Praterstraße 54, 1020 Wien",
+      "note": "《蓝色多瑙河》在此写成，今为纪念馆。"
+    },
+    "source": {
+      "label": "Wikipedia: Johann Strauss II",
+      "url": "https://en.wikipedia.org/wiki/Johann_Strauss_II",
+      "summary": "1825–1899，圆舞曲之王。"
+    },
+    "catalogue": "人物"
+  },
+  {
+    "id": "person-mahler",
+    "category": "people",
+    "work": "马勒",
+    "person": "作曲家、指挥家",
+    "genre": "作曲家 指挥家",
+    "birthYear": 1860,
+    "deathYear": 1911,
+    "year": 1860,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2034,
+    "lng": 16.3686,
+    "match": "马勒",
+    "context": "1860年生于波希米亚，1897–1907年任维也纳宫廷歌剧院总监，将其改革为欧洲最高水准的歌剧院。同时创作十部交响曲与《大地之歌》，1911年病逝于维也纳。",
+    "meaning": "马勒是晚期浪漫主义交响曲的集大成者，连接起19世纪传统与20世纪现代音乐。",
+    "place": {
+      "name": "维也纳国家歌剧院",
+      "address": "Opernring 2, 1010 Wien",
+      "note": "马勒在此任总监十年。"
+    },
+    "source": {
+      "label": "Wikipedia: Gustav Mahler",
+      "url": "https://en.wikipedia.org/wiki/Gustav_Mahler",
+      "summary": "1860–1911，作曲家与指挥家。"
+    },
+    "catalogue": "人物"
+  },
+  {
+    "id": "person-klimt",
+    "category": "people",
+    "work": "克林姆特",
+    "person": "画家 · 分离派领袖",
+    "genre": "画家 象征主义",
+    "birthYear": 1862,
+    "deathYear": 1918,
+    "year": 1862,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2007,
+    "lng": 16.3656,
+    "match": "克林姆特",
+    "context": "1862年生于维也纳近郊，1897年与友人创立维也纳分离派并任首任主席。他的「黄金时期」作品《吻》《阿黛尔》成为世纪末维也纳的视觉象征，1918年死于西班牙流感。",
+    "meaning": "克林姆特是维也纳现代艺术的旗手，把象征主义、情欲与装饰美学融为一体。",
+    "place": {
+      "name": "维也纳分离派展览馆",
+      "address": "Friedrichstraße 12, 1010 Wien",
+      "note": "克林姆特创立并领导分离派之地。"
+    },
+    "source": {
+      "label": "Wikipedia: Gustav Klimt",
+      "url": "https://en.wikipedia.org/wiki/Gustav_Klimt",
+      "summary": "1862–1918，分离派领袖。"
+    },
+    "catalogue": "人物"
+  },
+  {
+    "id": "person-schiele",
+    "category": "people",
+    "work": "席勒",
+    "person": "表现主义画家",
+    "genre": "画家 表现主义",
+    "birthYear": 1890,
+    "deathYear": 1918,
+    "year": 1890,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2024,
+    "lng": 16.3587,
+    "match": "席勒",
+    "context": "1890年生于图尔恩，受克林姆特提携崭露头角。他以扭曲、赤裸而强烈的人体线条开创奥地利表现主义，1918年在分离派个展大获成功后数月，便与怀孕的妻子双双死于西班牙流感，年仅28岁。",
+    "meaning": "席勒把世纪末维也纳的焦虑与死亡预感推向极致，是20世纪表现主义的先声。",
+    "place": {
+      "name": "利奥波德博物馆",
+      "address": "Museumsplatz 1, 1070 Wien",
+      "note": "收藏全世界最多的席勒作品。"
+    },
+    "source": {
+      "label": "Wikipedia: Egon Schiele",
+      "url": "https://en.wikipedia.org/wiki/Egon_Schiele",
+      "summary": "1890–1918，表现主义画家。"
+    },
+    "catalogue": "人物"
+  },
+  {
+    "id": "person-freud",
+    "category": "people",
+    "work": "弗洛伊德",
+    "person": "精神分析创始人",
+    "genre": "精神分析 心理学",
+    "birthYear": 1856,
+    "deathYear": 1939,
+    "year": 1856,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2167,
+    "lng": 16.3607,
+    "match": "弗洛伊德",
+    "context": "1856年生于摩拉维亚，自幼定居维也纳，在贝格街19号生活与工作长达47年。他创立精神分析，提出无意识、梦的解析与俄狄浦斯情结，1938年纳粹吞并奥地利后被迫流亡伦敦，次年病逝。",
+    "meaning": "弗洛伊德彻底改变了人类认识自身的方式，把「无意识」带入20世纪思想的核心。",
+    "place": {
+      "name": "弗洛伊德博物馆",
+      "address": "Berggasse 19, 1090 Wien",
+      "note": "弗洛伊德的诊室与书房完好保留。"
+    },
+    "source": {
+      "label": "Wikipedia: Sigmund Freud",
+      "url": "https://en.wikipedia.org/wiki/Sigmund_Freud",
+      "summary": "1856–1939，精神分析创始人。"
+    },
+    "catalogue": "人物"
+  },
+  {
+    "id": "person-wittgenstein",
+    "category": "people",
+    "work": "维特根斯坦",
+    "person": "哲学家",
+    "genre": "哲学家 逻辑",
+    "birthYear": 1889,
+    "deathYear": 1951,
+    "year": 1889,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.1955,
+    "lng": 16.3725,
+    "match": "维特根斯坦",
+    "context": "1889年生于维也纳最富有的家族之一，成长的宫殿由克林姆特装饰。他写下《逻辑哲学论》后一度认为哲学问题已解决，转而去乡村小学教书，后又回到剑桥重塑分析哲学。",
+    "meaning": "维特根斯坦两度重塑20世纪哲学，对语言与意义边界的追问影响至今。",
+    "place": {
+      "name": "维特根斯坦家族宫殿旧址",
+      "address": "Argentinierstraße 16, 1040 Wien",
+      "note": "维特根斯坦在此度过童年。"
+    },
+    "source": {
+      "label": "Wikipedia: Ludwig Wittgenstein",
+      "url": "https://en.wikipedia.org/wiki/Ludwig_Wittgenstein",
+      "summary": "1889–1951，哲学家。"
+    },
+    "catalogue": "人物"
+  },
+  {
+    "id": "person-otto-wagner",
+    "category": "people",
+    "work": "奥托·瓦格纳",
+    "person": "建筑师",
+    "genre": "建筑师 现代主义",
+    "birthYear": 1841,
+    "deathYear": 1918,
+    "year": 1841,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.2006,
+    "lng": 16.369,
+    "match": "奥托·瓦格纳",
+    "context": "1841年生于维也纳，从历史主义转向现代，提出「实用即美」。他设计了城市铁路系统、邮政储蓄银行与马略尔卡之家，并培养了一代维也纳现代主义建筑师。",
+    "meaning": "瓦格纳是维也纳现代建筑的奠基人，直接启发了鲁斯、霍夫曼与整个20世纪功能主义。",
+    "place": {
+      "name": "卡尔斯广场·瓦格纳候车亭",
+      "address": "Karlsplatz, 1010 Wien",
+      "note": "瓦格纳青春艺术风格市政建筑的代表。"
+    },
+    "source": {
+      "label": "Wikipedia: Otto Wagner",
+      "url": "https://en.wikipedia.org/wiki/Otto_Wagner",
+      "summary": "1841–1918，维也纳现代建筑奠基人。"
+    },
+    "catalogue": "人物"
+  },
+  {
+    "id": "person-sisi",
+    "category": "people",
+    "work": "茜茜公主",
+    "person": "奥匈帝国皇后（伊丽莎白）",
+    "genre": "皇后 哈布斯堡",
+    "birthYear": 1837,
+    "deathYear": 1898,
+    "year": 1837,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.208,
+    "lng": 16.3656,
+    "match": "__none__",
+    "context": "1837年生于慕尼黑，16岁嫁给奥皇弗朗茨·约瑟夫一世成为皇后。她美丽、叛逆、厌倦宫廷礼仪，长年在外旅行，1898年在日内瓦被一名无政府主义者刺杀。",
+    "meaning": "「茜茜」成为哈布斯堡帝国最具传奇色彩的象征，她的孤独与悲剧映照着一个走向黄昏的帝国。",
+    "place": {
+      "name": "霍夫堡皇宫（茜茜博物馆）",
+      "address": "Michaelerkuppel, 1010 Wien",
+      "note": "茜茜博物馆所在地，展出她的生平。"
+    },
+    "source": {
+      "label": "Wikipedia: Empress Elisabeth of Austria",
+      "url": "https://en.wikipedia.org/wiki/Empress_Elisabeth_of_Austria",
+      "summary": "1837–1898，奥匈帝国皇后。"
+    },
+    "catalogue": "人物"
+  },
+  {
+    "id": "person-franz-joseph",
+    "category": "people",
+    "work": "弗朗茨·约瑟夫一世",
+    "person": "奥匈帝国皇帝",
+    "genre": "皇帝 哈布斯堡",
+    "birthYear": 1830,
+    "deathYear": 1916,
+    "year": 1830,
+    "city": "Vienna",
+    "country": "Austria",
+    "lat": 48.1849,
+    "lng": 16.3122,
+    "match": "__none__",
+    "context": "1830年生，1848年18岁即位，在位68年，是哈布斯堡王朝在位最久的君主。他主持修建环城大道、达成1867年奥匈妥协，也目睹妻子茜茜遇刺、独子鲁道夫自杀、侄子斐迪南被刺引发一战。",
+    "meaning": "弗朗茨·约瑟夫几乎以一己之身代表了奥匈帝国的整个黄金时代与缓慢崩解。",
+    "place": {
+      "name": "美泉宫",
+      "address": "Schönbrunner Schloßstraße 47, 1130 Wien",
+      "note": "皇帝的夏宫，他在此出生并去世。"
+    },
+    "source": {
+      "label": "Wikipedia: Franz Joseph I of Austria",
+      "url": "https://en.wikipedia.org/wiki/Franz_Joseph_I_of_Austria",
+      "summary": "1830–1916，在位68年的奥匈皇帝。"
+    },
+    "catalogue": "人物"
+  }
+]

@@ -1,0 +1,158 @@
+{
+  "person-mozart": {
+    "work": "Mozart",
+    "person": "Composer",
+    "context": "Born in Salzburg in 1756, Mozart settled in Vienna in 1781 and spent his creative peak here, writing The Marriage of Figaro, Don Giovanni, The Magic Flute and a wealth of concertos. He died in poverty and illness in 1791, aged just 35.",
+    "meaning": "Mozart established Vienna as the operatic and Classical-music capital of 18th-century Europe and stands at the heart of the Viennese Classical school.",
+    "place": {
+      "name": "Mozarthaus Vienna",
+      "note": "He lived here 1784–1787 and wrote The Marriage of Figaro here; now a museum."
+    },
+    "source": {
+      "summary": "1756–1791, central figure of the Viennese Classical school."
+    }
+  },
+  "person-beethoven": {
+    "work": "Beethoven",
+    "person": "Composer",
+    "context": "Born in Bonn in 1770, Beethoven moved to Vienna in 1792 to study with Haydn and never left. He went deaf in Vienna yet wrote nine symphonies, the late string quartets and the Missa Solemnis; tens of thousands attended his 1827 funeral.",
+    "meaning": "Beethoven pushed the symphony to unprecedented scale and spiritual height — the watershed between Classical and Romantic.",
+    "place": {
+      "name": "Pasqualatihaus (a Beethoven residence)",
+      "note": "Beethoven lived here repeatedly; now a memorial."
+    },
+    "source": {
+      "summary": "1770–1827, the bridge from Classical to Romantic."
+    }
+  },
+  "person-schubert": {
+    "work": "Schubert",
+    "person": "Composer",
+    "context": "Born in Vienna in 1797, Schubert barely left the city his whole life. In just 31 years he wrote over 600 Lieder, nine symphonies and much chamber music, dying young in 1828 and — by his wish — buried beside Beethoven.",
+    "meaning": "Schubert raised the German art song (Lied) into an art form of its own, the embodiment of Romantic lyricism.",
+    "place": {
+      "name": "Schubert's birthplace",
+      "note": "Schubert was born here; now a museum."
+    },
+    "source": {
+      "summary": "1797–1828, master of the art song."
+    }
+  },
+  "person-strauss": {
+    "work": "Johann Strauss II",
+    "person": "Composer · the Waltz King",
+    "context": "Born in Vienna in 1825, Strauss defied his bandmaster father to pursue music, and conquered Europe with waltzes such as The Blue Danube and Tales from the Vienna Woods — earning the title 'the Waltz King'.",
+    "meaning": "He brought the Viennese waltz to its artistic summit, making it a byword for the elegance of the Habsburg golden age.",
+    "place": {
+      "name": "Strauss residence",
+      "note": "The Blue Danube was written here; now a museum."
+    },
+    "source": {
+      "summary": "1825–1899, the Waltz King."
+    }
+  },
+  "person-mahler": {
+    "work": "Mahler",
+    "person": "Composer & conductor",
+    "context": "Born in Bohemia in 1860, Mahler directed the Vienna Court Opera from 1897 to 1907, reforming it into Europe's finest. He also wrote ten symphonies and Das Lied von der Erde, dying in Vienna in 1911.",
+    "meaning": "Mahler is the culmination of the late-Romantic symphony, linking 19th-century tradition to 20th-century modern music.",
+    "place": {
+      "name": "Vienna State Opera",
+      "note": "Mahler was its director for ten years."
+    },
+    "source": {
+      "summary": "1860–1911, composer and conductor."
+    }
+  },
+  "person-klimt": {
+    "work": "Klimt",
+    "person": "Painter · Secession leader",
+    "context": "Born near Vienna in 1862, Klimt co-founded the Vienna Secession in 1897 and was its first president. His 'Golden Phase' works — The Kiss, Adele — became the visual emblem of fin-de-siècle Vienna; he died of the Spanish flu in 1918.",
+    "meaning": "Klimt was the standard-bearer of Viennese modern art, fusing Symbolism, eros and decorative beauty.",
+    "place": {
+      "name": "Vienna Secession Building",
+      "note": "Where Klimt founded and led the Secession."
+    },
+    "source": {
+      "summary": "1862–1918, leader of the Secession."
+    }
+  },
+  "person-schiele": {
+    "work": "Schiele",
+    "person": "Expressionist painter",
+    "context": "Born in Tulln in 1890, Schiele rose to prominence under Klimt's wing. His distorted, raw, intense figures pioneered Austrian Expressionism; months after his triumph at the 1918 Secession show, he and his pregnant wife both died in the Spanish flu — he was just 28.",
+    "meaning": "Schiele drove fin-de-siècle Vienna's anxiety and foreboding of death to the extreme, a herald of 20th-century Expressionism.",
+    "place": {
+      "name": "Leopold Museum",
+      "note": "Holds the world's largest Schiele collection."
+    },
+    "source": {
+      "summary": "1890–1918, Expressionist painter."
+    }
+  },
+  "person-freud": {
+    "work": "Freud",
+    "person": "Founder of psychoanalysis",
+    "context": "Born in Moravia in 1856, Freud grew up in Vienna and lived and worked at Berggasse 19 for 47 years. He founded psychoanalysis — the unconscious, dream interpretation, the Oedipus complex — and was forced into exile in London after the 1938 Nazi annexation, dying the next year.",
+    "meaning": "Freud fundamentally changed how humanity understands itself, placing the 'unconscious' at the centre of 20th-century thought.",
+    "place": {
+      "name": "Sigmund Freud Museum",
+      "note": "His consulting room and study are preserved."
+    },
+    "source": {
+      "summary": "1856–1939, founder of psychoanalysis."
+    }
+  },
+  "person-wittgenstein": {
+    "work": "Wittgenstein",
+    "person": "Philosopher",
+    "context": "Born in 1889 into one of Vienna's wealthiest families, in a palace decorated by Klimt, Wittgenstein wrote the Tractatus, briefly believed philosophy's problems solved, went off to teach village schoolchildren, then returned to Cambridge to reshape analytic philosophy.",
+    "meaning": "Wittgenstein reshaped 20th-century philosophy twice; his inquiry into the limits of language and meaning still resonates.",
+    "place": {
+      "name": "Former Wittgenstein family palace",
+      "note": "Wittgenstein spent his childhood here."
+    },
+    "source": {
+      "summary": "1889–1951, philosopher."
+    }
+  },
+  "person-otto-wagner": {
+    "work": "Otto Wagner",
+    "person": "Architect",
+    "context": "Born in Vienna in 1841, Wagner turned from historicism to the modern, declaring 'what is practical is beautiful'. He designed the city railway, the Postal Savings Bank and the Majolica House, and trained a generation of Viennese modernists.",
+    "meaning": "Wagner is the founder of Viennese modern architecture, directly inspiring Loos, Hoffmann and 20th-century functionalism.",
+    "place": {
+      "name": "Karlsplatz · Otto Wagner Pavilion",
+      "note": "A signature of his Jugendstil civic architecture."
+    },
+    "source": {
+      "summary": "1841–1918, founder of Viennese modern architecture."
+    }
+  },
+  "person-sisi": {
+    "work": "Empress Elisabeth (Sisi)",
+    "person": "Empress of Austria-Hungary",
+    "context": "Born in Munich in 1837, at 16 she married Emperor Franz Joseph I to become empress. Beautiful, rebellious and weary of court ritual, she travelled for years and was assassinated by an anarchist in Geneva in 1898.",
+    "meaning": "'Sisi' became the most legendary emblem of the Habsburg empire; her loneliness and tragedy mirror an empire sliding toward dusk.",
+    "place": {
+      "name": "Hofburg Palace (Sisi Museum)",
+      "note": "Home of the Sisi Museum, telling her life."
+    },
+    "source": {
+      "summary": "1837–1898, Empress of Austria-Hungary."
+    }
+  },
+  "person-franz-joseph": {
+    "work": "Franz Joseph I",
+    "person": "Emperor of Austria-Hungary",
+    "context": "Born in 1830, he took the throne at 18 in 1848 and reigned for 68 years, the longest-reigning Habsburg. He oversaw the Ringstraße and the 1867 Compromise, and lived to see Sisi assassinated, his son Rudolf's suicide, and his nephew Ferdinand's killing ignite WWI.",
+    "meaning": "Franz Joseph almost single-handedly embodies the whole golden age and slow collapse of Austria-Hungary.",
+    "place": {
+      "name": "Schönbrunn Palace",
+      "note": "The imperial summer palace, where he was born and died."
+    },
+    "source": {
+      "summary": "1830–1916, Habsburg emperor who reigned 68 years."
+    }
+  }
+}

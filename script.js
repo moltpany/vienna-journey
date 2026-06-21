@@ -9,6 +9,7 @@ const CAT_COLORS = {
   'philosophy':     '#9b59b6',
   'psychoanalysis': '#3498db',
   'literature':     '#2ecc71',
+  'people':         '#c8a04a',
 };
 
 const CAT_LABELS = {
@@ -18,6 +19,7 @@ const CAT_LABELS = {
   'philosophy':     '哲学',
   'psychoanalysis': '精神分析',
   'literature':     '文学',
+  'people':         '人物',
 };
 
 const CAT_LABELS_EN = {
@@ -27,6 +29,7 @@ const CAT_LABELS_EN = {
   'philosophy':     'Philosophy',
   'psychoanalysis': 'Psychoanalysis',
   'literature':     'Literature',
+  'people':         'People',
 };
 
 function catLabel(cat) {
@@ -91,6 +94,11 @@ async function loadData() {
   // English overlays (optional; graceful fallback to Chinese if missing)
   enEntries    = (await loadJson('data/vienna-journey.en.json'))    || {};
   enMilestones = (await loadJson('data/vienna-milestones.en.json')) || {};
+  // People (lifespan figures) are merged into entries so they share map/list/filter/detail
+  const people   = (await loadJson('data/vienna-people.json')) || [];
+  const peopleEn = (await loadJson('data/vienna-people.en.json')) || {};
+  entries = entries.concat(people);
+  Object.assign(enEntries, peopleEn);
 }
 
 async function loadJson(url) {
@@ -130,11 +138,14 @@ function renderMarkers() {
   entries.forEach(entry => {
     const e = tr(entry);
     const color = CAT_COLORS[entry.category] || '#aaa';
+    const isPerson = entry.category === 'people';
     const icon = L.divIcon({
       className: '',
-      html: `<div class="custom-marker" style="width:14px;height:14px;background:${color};"></div>`,
-      iconSize: [14, 14],
-      iconAnchor: [7, 7],
+      html: isPerson
+        ? `<div class="custom-marker person-marker" style="border-color:${color};"></div>`
+        : `<div class="custom-marker" style="width:14px;height:14px;background:${color};"></div>`,
+      iconSize: isPerson ? [16, 16] : [14, 14],
+      iconAnchor: isPerson ? [8, 8] : [7, 7],
       popupAnchor: [0, -10],
     });
 
@@ -142,7 +153,7 @@ function renderMarkers() {
       .bindPopup(`
         <div class="popup-work">${e.work}</div>
         <div class="popup-person">${e.person || ''}</div>
-        <div class="popup-year">${e.year} · ${e.city}</div>
+        <div class="popup-year">${isPerson && entry.birthYear ? entry.birthYear + '–' + entry.deathYear : e.year + ' · ' + e.city}</div>
       `)
       .addTo(map);
 
@@ -257,7 +268,7 @@ const UI = {
     'subtitle': '维也纳文化地图',
     'view-map': '🗺 地图', 'view-list': '☰ 列表',
     'cat-music': '音乐', 'cat-visual-art': '视觉艺术', 'cat-architecture': '建筑',
-    'cat-psychoanalysis': '精神分析', 'cat-philosophy': '哲学', 'cat-literature': '文学',
+    'cat-psychoanalysis': '精神分析', 'cat-philosophy': '哲学', 'cat-literature': '文学', 'cat-people': '人物',
     'search-ph': '搜索作品或人物…',
     'theme-title': '切换深色 / 浅色',
     'lang-btn': 'EN',
@@ -273,7 +284,7 @@ const UI = {
     'subtitle': 'A Cultural Map of Vienna',
     'view-map': '🗺 Map', 'view-list': '☰ List',
     'cat-music': 'Music', 'cat-visual-art': 'Visual Art', 'cat-architecture': 'Architecture',
-    'cat-psychoanalysis': 'Psychoanalysis', 'cat-philosophy': 'Philosophy', 'cat-literature': 'Literature',
+    'cat-psychoanalysis': 'Psychoanalysis', 'cat-philosophy': 'Philosophy', 'cat-literature': 'Literature', 'cat-people': 'People',
     'search-ph': 'Search works or people…',
     'theme-title': 'Toggle dark / light',
     'lang-btn': '中',
@@ -464,8 +475,8 @@ function renderTimeline() {
     el.addEventListener('click',      (e) => { e.stopPropagation(); showMilestoneTooltip(ms, e); el.classList.toggle('active'); });
   });
 
-  // Entry dots
-  entries.forEach(entry => {
+  // Entry dots (works only; people are lifespans, shown in the per-person life timeline)
+  entries.filter(entry => entry.category !== 'people').forEach(entry => {
     const color = CAT_COLORS[entry.category] || '#aaa';
     const dot = document.createElement('div');
     dot.className = 'tl-entry-dot';
@@ -547,6 +558,53 @@ function restoreFromHash() {
   if (id && entries.some(e => e.id === id)) selectEntry(id);
 }
 
+/* ── PER-PERSON LIFE TIMELINE (people only) ── */
+function renderLifeTimeline(entry) {
+  const el = document.getElementById('detail-life');
+  if (!el) return;
+  if (entry.category !== 'people' || !entry.birthYear || !entry.deathYear) {
+    el.style.display = 'none';
+    el.innerHTML = '';
+    return;
+  }
+  const b = entry.birthYear, d = entry.deathYear, span = (d - b) || 1;
+  const hasMatch = entry.match && entry.match !== '__none__';
+  const works = hasMatch
+    ? entries.filter(w => w.category !== 'people' && (w.person || '').includes(entry.match))
+    : [];
+
+  let items;
+  if (works.length) {
+    items = works.map(w => ({ year: w.year, color: CAT_COLORS[w.category] || '#aaa', label: tr(w).work, id: w.id }));
+  } else {
+    items = milestones.filter(m => m.year >= b && m.year <= d)
+      .map(m => ({ year: m.year, color: '', label: trMs(m).label, id: '' }));
+  }
+
+  const dots = items.map(it => {
+    const x = ((it.year - b) / span) * 100;
+    const c = it.color ? `background:${it.color};` : '';
+    return `<button class="life-dot" type="button" style="left:${x}%;${c}" data-id="${it.id}" title="${it.year} · ${(it.label || '').replace(/"/g, '&quot;')}"></button>`;
+  }).join('');
+
+  const heading = (lang === 'en' ? 'Life' : '人生') + ' · ' + b + '–' + d;
+  const hint = works.length
+    ? (lang === 'en' ? 'works placed across the life — click a dot' : '作品在人生中的位置 · 点圆点跳转')
+    : (lang === 'en' ? 'milestones during the life' : '在世期间的历史里程碑');
+
+  el.style.display = '';
+  el.innerHTML = `
+    <div class="detail-section-label">${heading}</div>
+    <div class="life-line"><div class="life-axis"></div>${dots}</div>
+    <div class="life-ends"><span>${b}</span><span>${d}</span></div>
+    <div class="life-hint">${hint}</div>
+  `;
+  el.querySelectorAll('.life-dot[data-id]').forEach(dotEl => {
+    const wid = dotEl.getAttribute('data-id');
+    if (wid) dotEl.addEventListener('click', () => selectEntry(wid));
+  });
+}
+
 /* ── DETAIL PANEL ── */
 function showDetail(entry) {
   document.getElementById('detail-empty').style.display = 'none';
@@ -565,7 +623,12 @@ function showDetail(entry) {
   document.getElementById('detail-work').textContent   = entry.work || '';
   document.getElementById('detail-person').textContent = entry.person || '';
   document.getElementById('detail-meta').textContent   =
-    [entry.year, entry.city, entry.country].filter(Boolean).join(' · ');
+    (entry.category === 'people' && entry.birthYear)
+      ? entry.birthYear + '–' + entry.deathYear
+      : [entry.year, entry.city, entry.country].filter(Boolean).join(' · ');
+
+  // Life timeline (people only)
+  renderLifeTimeline(entry);
 
   // Image
   const imgEl = document.getElementById('detail-image');

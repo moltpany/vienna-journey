@@ -15,6 +15,7 @@
   --philosophy: #9b59b6;
   --psychoanalysis: #3498db;
   --literature: #2ecc71;
+  --people: #c8a04a;
 
   --panel-width: 380px;
   --timeline-height: 72px;
@@ -111,6 +112,8 @@ html, body {
 .cat-btn[data-cat="philosophy"].active     { color: var(--philosophy); border-color: var(--philosophy); }
 .cat-btn[data-cat="psychoanalysis"].active { color: var(--psychoanalysis); border-color: var(--psychoanalysis); }
 .cat-btn[data-cat="literature"].active     { color: var(--literature); border-color: var(--literature); }
+.cat-btn[data-cat="people"] .dot           { background: var(--people); }
+.cat-btn[data-cat="people"].active         { color: var(--people); border-color: var(--people); }
 
 #search-box {
   background: var(--surface-2);
@@ -437,6 +440,21 @@ html[lang="en"] #detail-context::first-letter {
   cursor: pointer;
   transition: transform 0.1s;
 }
+.person-marker {
+  width: 16px;
+  height: 16px;
+  background: var(--surface);
+  border-width: 3px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+}
+
+/* per-person life timeline (detail panel) */
+.life-line { position: relative; height: 26px; margin-top: 6px; }
+.life-axis { position: absolute; top: 12px; left: 3px; right: 3px; height: 2px; border-radius: 2px; background: var(--gold); opacity: 0.45; }
+.life-dot { position: absolute; top: 6px; width: 13px; height: 13px; padding: 0; border-radius: 50%; background: var(--gold); border: 2px solid var(--surface); transform: translateX(-50%); cursor: pointer; transition: transform 0.1s; }
+.life-dot:hover { transform: translateX(-50%) scale(1.45); z-index: 2; }
+.life-ends { display: flex; justify-content: space-between; font-size: 10px; color: var(--text-dim); margin-top: 3px; }
+.life-hint { font-size: 10px; color: var(--text-dim); margin-top: 5px; font-style: italic; }
 
 .leaflet-popup-content-wrapper {
   background: var(--surface);
