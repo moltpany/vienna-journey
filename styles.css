@@ -585,6 +585,14 @@ body.view-list #list-container { display: flex; }
 .list-card:hover { background: var(--surface-2); transform: translateY(-2px); }
 .list-card.selected { background: var(--surface-2); box-shadow: 0 0 0 1px var(--cat-color); }
 .list-card.hidden { display: none; }
+.list-card-thumb {
+  height: 120px;
+  margin: -11px -14px 11px;
+  border-radius: 7px 7px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--surface-2);
+}
 .list-card-cat {
   font-size: 10px;
   letter-spacing: 0.06em;

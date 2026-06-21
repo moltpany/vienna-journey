@@ -72,6 +72,7 @@ async function init() {
   if (window.ResizeObserver && mapBox) {
     new ResizeObserver(() => { if (map) map.invalidateSize(); }).observe(mapBox);
   }
+  restoreFromHash();
 }
 
 async function loadData() {
@@ -403,11 +404,15 @@ function renderList() {
   [...entries].sort((a, b) => a.year - b.year).forEach(entry => {
     const e = tr(entry);
     const color = CAT_COLORS[entry.category] || '#aaa';
+    const thumb = (e.image && e.image.url)
+      ? `<div class="list-card-thumb" style="background-image:url('${e.image.url.replace('width=680', 'width=360')}')"></div>`
+      : '';
     const card = document.createElement('div');
-    card.className = 'list-card';
+    card.className = 'list-card' + (thumb ? ' has-thumb' : '');
     card.dataset.id = entry.id;
     card.style.setProperty('--cat-color', color);
     card.innerHTML = `
+      ${thumb}
       <div class="list-card-cat">${catLabel(entry.category)}</div>
       <div class="list-card-work">${e.work}</div>
       <div class="list-card-person">${e.person || ''}</div>
@@ -523,6 +528,7 @@ function selectEntry(id) {
   }
 
   showDetail(tr(entry));
+  if (history.replaceState) history.replaceState(null, '', '#' + encodeURIComponent(id));
 }
 
 function deselect() {
@@ -533,6 +539,12 @@ function deselect() {
   map.closePopup();
   document.getElementById('detail-empty').style.display = '';
   document.getElementById('detail-content').classList.remove('visible');
+  if (history.replaceState) history.replaceState(null, '', location.pathname + location.search);
+}
+
+function restoreFromHash() {
+  const id = decodeURIComponent((location.hash || '').replace(/^#/, ''));
+  if (id && entries.some(e => e.id === id)) selectEntry(id);
 }
 
 /* ── DETAIL PANEL ── */
